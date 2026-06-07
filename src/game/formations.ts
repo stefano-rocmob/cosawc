@@ -10,7 +10,7 @@ const FORMATIONS = formationsData as FormationsData;
 
 export function getFormationSlots(
   formation: FormationKey,
-  style: StyleKey = "equilibrado",
+  style: StyleKey = "balanced",
 ): FormationSlot[] {
   return FORMATIONS[formation][style].map((slot) => ({ ...slot }));
 }

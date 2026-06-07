@@ -69,16 +69,16 @@ export function MyCard({
 
         <ul className="my-card-lineup">
           {lineup.map((player) => {
-            const country = countryDisplay(player.sel);
+            const country = countryDisplay(player.team);
             return (
-              <li key={player.playerId} className="my-card-player">
+              <li key={player.id} className="my-card-player">
                 <span className="my-card-num">{player.number}</span>
                 <span className="my-card-player-name">
                   {player.name}
                   {player.legend && <span className="legend-star"> ★</span>}
                 </span>
                 <span className="my-card-player-meta">
-                  {country.flag} {player.sel} {player.copa}
+                  {country.flag} {player.team} {player.year}
                 </span>
                 <span className="my-card-player-pos">
                   {formatAllPlayerPositions(player.positions)}

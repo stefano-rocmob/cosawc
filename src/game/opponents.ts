@@ -11,7 +11,7 @@ export function generateOpponents(state: GameState): SquadRef[] {
   const used = new Set(
     state.draft.filled
       .filter((p): p is NonNullable<typeof p> => p !== null)
-      .map((p) => squadKey({ sel: p.sel, copa: p.copa })),
+      .map((p) => squadKey({ team: p.team, year: p.year })),
   );
 
   const rng = createRng(`${state.seed.toUpperCase()}:opp`);
@@ -36,7 +36,7 @@ export function generateOpponents(state: GameState): SquadRef[] {
 
     const picked = pick(rng, pool);
     chosen.add(squadKey(picked));
-    result.push({ sel: picked.sel, copa: picked.copa });
+    result.push({ team: picked.team, year: picked.year });
   }
 
   return result;

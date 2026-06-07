@@ -1,33 +1,33 @@
 import type { PositionCode, StyleKey } from "./types";
 
 export const POSITION_LABELS: Record<PositionCode, string> = {
-  GOL: "GK",
-  LD: "RB",
-  LE: "LB",
-  ZAG: "CB",
-  MD: "RM",
-  ME: "LM",
-  VOL: "DM",
-  MC: "CM",
-  MEI: "AM",
-  PD: "RW",
-  PE: "LW",
-  CA: "ST",
+  GK: "GK",
+  RB: "RB",
+  LB: "LB",
+  CB: "CB",
+  RM: "RM",
+  LM: "LM",
+  DM: "DM",
+  CM: "CM",
+  AM: "AM",
+  RW: "RW",
+  LW: "LW",
+  ST: "ST",
 };
 
 const POSITION_SORT_ORDER: Record<PositionCode, number> = {
-  GOL: 0,
-  LD: 1,
-  LE: 2,
-  ZAG: 3,
-  MD: 4,
-  ME: 5,
-  VOL: 6,
-  MC: 7,
-  MEI: 8,
-  PD: 9,
-  PE: 10,
-  CA: 11,
+  GK: 0,
+  RB: 1,
+  LB: 2,
+  CB: 3,
+  RM: 4,
+  LM: 5,
+  DM: 6,
+  CM: 7,
+  AM: 8,
+  RW: 9,
+  LW: 10,
+  ST: 11,
 };
 
 export function positionLabel(pos: PositionCode): string {
@@ -59,13 +59,13 @@ export function formatBoxScorePlayer(player: {
 }
 
 export function formatPlayerTooltip(
-  player: { name: string; positions: PositionCode[]; force: number; number: number },
+  player: { name: string; positions: PositionCode[]; rating: number; number: number },
   statsVisible: boolean,
 ): string {
   const jersey = formatJerseyNumber(player.number, statsVisible);
   const pos = statsVisible ? formatAllPlayerPositions(player.positions) : "?";
-  const force = statsVisible ? String(player.force) : "?";
-  return `${jersey} ${player.name} · ${pos} · ${force}`;
+  const rating = statsVisible ? String(player.rating) : "?";
+  return `${jersey} ${player.name} · ${pos} · ${rating}`;
 }
 
 export function primaryPositionOrder(positions: PositionCode[]): number {
@@ -74,25 +74,25 @@ export function primaryPositionOrder(positions: PositionCode[]): number {
 }
 
 export const STYLE_DISPLAY: Record<StyleKey, string> = {
-  defensivo: "DEFENSIVE",
-  equilibrado: "BALANCED",
-  ofensivo: "OFFENSIVE",
+  defensive: "DEFENSIVE",
+  balanced: "BALANCED",
+  offensive: "OFFENSIVE",
 };
 
 export const STYLE_BUTTON_LABELS: Record<StyleKey, string> = {
-  defensivo: "Defensive",
-  equilibrado: "Balanced",
-  ofensivo: "Attacking",
+  defensive: "Defensive",
+  balanced: "Balanced",
+  offensive: "Attacking",
 };
 
 export const MODE_DISPLAY: Record<string, string> = {
-  classico: "CLASSIC",
-  almanaque: "FROM MEMORY",
+  classic: "CLASSIC",
+  memory: "FROM MEMORY",
 };
 
 export const MODE_BUTTON_LABELS: Record<string, string> = {
-  classico: "Classic",
-  almanaque: "From memory",
+  classic: "Classic",
+  memory: "From memory",
 };
 
 export const COUNTRY_NAMES: Record<string, { en: string; flag: string }> = {
@@ -150,8 +150,8 @@ export const COUNTRY_NAMES: Record<string, { en: string; flag: string }> = {
   YUG: { en: "Yugoslavia", flag: "🇷🇸" },
 };
 
-export function countryDisplay(sel: string): { name: string; flag: string } {
-  const entry = COUNTRY_NAMES[sel];
+export function countryDisplay(team: string): { name: string; flag: string } {
+  const entry = COUNTRY_NAMES[team];
   if (entry) return { name: entry.en, flag: entry.flag };
-  return { name: sel, flag: "🏳️" };
+  return { name: team, flag: "🏳️" };
 }

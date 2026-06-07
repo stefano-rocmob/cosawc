@@ -13,7 +13,7 @@ type Props = {
   onRoll: () => void;
 };
 
-const MODE_KEYS: ModeKey[] = ["classico", "almanaque"];
+const MODE_KEYS: ModeKey[] = ["classic", "memory"];
 
 export function StartControls({
   formation,

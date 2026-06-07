@@ -50,7 +50,7 @@ export function MatchRevealCard({
           <div className="run-match-opp">
             <span className="run-vs">vs</span>
             <span className="run-opp-name">
-              {opponentLabel(match.oppSel, match.oppCopa)}
+              {opponentLabel(match.oppTeam, match.oppYear)}
             </span>
           </div>
         </div>

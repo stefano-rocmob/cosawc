@@ -37,4 +37,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/7a0_codex_handoff
+# local notes, scripts, handoff files, and other non-game assets (not committed)
+/private

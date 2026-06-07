@@ -37,7 +37,7 @@ function createDraftState(opts: GameOptions): DraftState {
     mode,
     slots,
     filled: slots.map(() => null),
-    usedPlayerIds: [],
+    usedIds: [],
     rerollsLeft: MODES[mode].rerolls,
   };
 }
@@ -75,7 +75,7 @@ export function compatiblePositions(
 }
 
 export function isPlayerSelectable(draft: DraftState, player: Player): boolean {
-  if (draft.usedPlayerIds.includes(player.playerId)) return false;
+  if (draft.usedIds.includes(player.id)) return false;
   return compatiblePositions(draft, player.positions).length > 0;
 }
 
@@ -122,18 +122,18 @@ function pickSquad(
   return pick(createRng(rngSeed), pool.length ? pool : catalog);
 }
 
-function squadsByYear(copa: number): string[] {
-  return SQUAD_CATALOG.filter((s) => s.copa === copa).map((s) => s.sel);
+function squadsByYear(year: number): string[] {
+  return SQUAD_CATALOG.filter((s) => s.year === year).map((s) => s.team);
 }
 
 function squadsByCountry(
-  sel: string,
+  team: string,
   aliases: Record<string, string[]> = COUNTRY_ALIASES,
 ): SquadRef[] {
-  const codes = aliases[sel] ?? [sel];
-  return SQUAD_CATALOG.filter((s) => codes.includes(s.sel)).map(({ sel, copa }) => ({
-    sel,
-    copa,
+  const codes = aliases[team] ?? [team];
+  return SQUAD_CATALOG.filter((s) => codes.includes(s.team)).map(({ team, year }) => ({
+    team,
+    year,
   }));
 }
 
@@ -143,22 +143,22 @@ function rerollSquad(
   axis: RerollAxis,
   avoid: Set<string>,
 ): SquadRef {
-  if (axis === "copa") {
-    const candidates = squadsByCountry(current.sel).filter(
-      (s) => !(s.sel === current.sel && s.copa === current.copa),
+  if (axis === "year") {
+    const candidates = squadsByCountry(current.team).filter(
+      (s) => !(s.team === current.team && s.year === current.year),
     );
     if (candidates.length === 0) return current;
     const pool = candidates.filter((s) => !avoid.has(squadKey(s)));
     return pick(createRng(rngSeed), pool.length ? pool : candidates);
   }
 
-  const teams = squadsByYear(current.copa).filter((sel) => sel !== current.sel);
+  const teams = squadsByYear(current.year).filter((t) => t !== current.team);
   if (teams.length === 0) return current;
   const pool = teams.filter(
-    (sel) => !avoid.has(`${sel}:${current.copa}`),
+    (t) => !avoid.has(`${t}:${current.year}`),
   );
-  const sel = pick(createRng(rngSeed), pool.length ? pool : teams);
-  return { sel, copa: current.copa };
+  const team = pick(createRng(rngSeed), pool.length ? pool : teams);
+  return { team, year: current.year };
 }
 
 function rerollSeed(
@@ -216,7 +216,7 @@ export function choosePlayer(
   slotIndex: number,
 ): GameState {
   const draft = state.draft;
-  if (draft.usedPlayerIds.includes(player.playerId)) {
+  if (draft.usedIds.includes(player.id)) {
     throw new Error(`Player already used: ${player.name}`);
   }
   const slot = draft.slots[slotIndex];
@@ -236,7 +236,7 @@ export function choosePlayer(
     draft: {
       ...draft,
       filled,
-      usedPlayerIds: [...draft.usedPlayerIds, player.playerId],
+      usedIds: [...draft.usedIds, player.id],
     },
   };
 }

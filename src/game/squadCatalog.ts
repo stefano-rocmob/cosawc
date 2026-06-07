@@ -7,14 +7,14 @@ export const SQUAD_INDEX: SquadIndexItem[] = (
   indexData as SquadIndexItem[]
 ).slice().sort((a, b) => a.band - b.band);
 
-export function catalogKey(sel: string, copa: number): string {
-  return `${sel}:${copa}`;
+export function catalogKey(team: string, year: number): string {
+  return `${team}:${year}`;
 }
 
-export function slugForSquad(sel: string, copa: number): string | undefined {
-  return SQUAD_CATALOG.find((s) => s.sel === sel && s.copa === copa)?.slug;
+export function slugForSquad(team: string, year: number): string | undefined {
+  return SQUAD_CATALOG.find((s) => s.team === team && s.year === year)?.slug;
 }
 
 export function allSquadRefs(): SquadRef[] {
-  return SQUAD_CATALOG.map(({ sel, copa }) => ({ sel, copa }));
+  return SQUAD_CATALOG.map(({ team, year }) => ({ team, year }));
 }

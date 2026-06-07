@@ -3,8 +3,8 @@
 import { countryDisplay } from "@/game/positionLabels";
 
 type Props = {
-  sel: string;
-  copa: number;
+  team: string;
+  year: number;
   rerollsLeft: number;
   onAnotherTeam: () => void;
   onAnotherCup: () => void;
@@ -13,15 +13,15 @@ type Props = {
 };
 
 export function SquadHeader({
-  sel,
-  copa,
+  team,
+  year,
   rerollsLeft,
   onAnotherTeam,
   onAnotherCup,
   onEmergencyReroll,
   emergencyNeeded,
 }: Props) {
-  const { name, flag } = countryDisplay(sel);
+  const { name, flag } = countryDisplay(team);
 
   return (
     <div className="roll-result">
@@ -30,7 +30,7 @@ export function SquadHeader({
         <span className="squad-flag">{flag}</span>
         <span className="squad-country">{name}</span>
       </div>
-      <p className="squad-copa">Cup {copa}</p>
+      <p className="squad-year">Cup {year}</p>
 
       <p className="reroll-copy">
         Not feeling it? Re-roll — {rerollsLeft} left

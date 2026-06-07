@@ -70,8 +70,8 @@ function PoolRow({
         {player.legend && <span className="legend-star"> ★</span>}
       </span>
       <span className="pool-pos">{posLabel}</span>
-      <span className="pool-force">
-        {statsVisible ? player.force : "?"}
+      <span className="pool-rating">
+        {statsVisible ? player.rating : "?"}
       </span>
     </button>
   );
@@ -113,10 +113,10 @@ export function SquadList({
       <div className="squad-list">
         {sortedSquad.map((player) => (
           <PoolRow
-            key={player.playerId}
+            key={player.id}
             player={player}
             statsVisible={statsVisible}
-            isPending={pendingPlayer?.playerId === player.playerId}
+            isPending={pendingPlayer?.id === player.id}
             selectable={isPlayerSelectable(draft, player)}
             onSelectPlayer={onSelectPlayer}
           />

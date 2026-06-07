@@ -46,8 +46,8 @@ export function PlayGame() {
   const [moveFrom, setMoveFrom] = useState<number | null>(null);
   const [simResult, setSimResult] = useState<TournamentResult | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [theme, setTheme] = useLocalPref("s70-theme", "light", ["dark", "light"] as const);
-  const [revealMode, setRevealMode] = useLocalPref("s70-reveal", "manual", ["manual", "auto"] as const);
+  const [theme, setTheme] = useLocalPref("cosa-wc-theme", "light", ["dark", "light"] as const);
+  const [revealMode, setRevealMode] = useLocalPref("cosa-wc-reveal", "manual", ["manual", "auto"] as const);
 
   const loader = useMemo(() => createSquadLoader(), []);
 
@@ -80,7 +80,7 @@ export function PlayGame() {
       return;
     }
     loader
-      .ensure(currentRef.sel, currentRef.copa)
+      .ensure(currentRef.team, currentRef.year)
       .then(setCurrentSquad)
       .catch((err: Error) => setError(err.message));
   }, [currentRef, loader]);
@@ -97,7 +97,7 @@ export function PlayGame() {
     setMoveFrom(null);
   };
 
-  const onReroll = (axis: "copa" | "sel") => {
+  const onReroll = (axis: "year" | "team") => {
     try {
       apply((prev) => rerollSquadAction(prev, axis, true));
       setPendingPlayer(null);
@@ -108,7 +108,7 @@ export function PlayGame() {
 
   const onEmergencyReroll = () => {
     try {
-      apply((prev) => rerollSquadAction(prev, "sel", false));
+      apply((prev) => rerollSquadAction(prev, "team", false));
       setPendingPlayer(null);
     } catch (err) {
       setError((err as Error).message);
@@ -179,7 +179,7 @@ export function PlayGame() {
         scores.defense,
         lineup,
         opponents,
-        (sel, copa) => loader.get(sel, copa),
+        (team, year) => loader.get(team, year),
       );
       setSimResult(result);
       setPhase("revealing");
@@ -257,11 +257,11 @@ export function PlayGame() {
             ) : game.current ? (
               <>
                 <SquadHeader
-                  sel={game.current.sel}
-                  copa={game.current.copa}
+                  team={game.current.team}
+                  year={game.current.year}
                   rerollsLeft={game.draft.rerollsLeft}
-                  onAnotherTeam={() => onReroll("sel")}
-                  onAnotherCup={() => onReroll("copa")}
+                  onAnotherTeam={() => onReroll("team")}
+                  onAnotherCup={() => onReroll("year")}
                   onEmergencyReroll={onEmergencyReroll}
                   emergencyNeeded={emergencyNeeded}
                 />

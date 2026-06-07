@@ -4,10 +4,10 @@ import type { GoalEvent, MatchResult } from "./types";
 export const USER_TEAM_NAME = "COSA NYC";
 
 export const PHASE_DISPLAY: Record<string, string> = {
-  GRUPOS: "GROUPS",
-  OITAVAS: "ROUND OF 16",
-  QUARTAS: "QUARTERS",
-  SEMI: "SEMI",
+  GROUP: "GROUPS",
+  R16: "ROUND OF 16",
+  QF: "QUARTERS",
+  SF: "SEMI",
   FINAL: "FINAL",
 };
 
@@ -15,21 +15,21 @@ export function phaseLabel(phase: string): string {
   return PHASE_DISPLAY[phase] ?? phase;
 }
 
-export function opponentLabel(sel: string, copa: number): string {
-  const { name, flag } = countryDisplay(sel);
-  return `${flag} ${name} ${copa}`;
+export function opponentLabel(team: string, year: number): string {
+  const { name, flag } = countryDisplay(team);
+  return `${flag} ${name} ${year}`;
 }
 
 export function matchOutcomeKind(
   match: MatchResult,
 ): "win" | "draw" | "loss" {
-  if (match.phase === "GRUPOS") {
-    if (match.outcome === "V") return "win";
-    if (match.outcome === "E") return "draw";
+  if (match.phase === "GROUP") {
+    if (match.outcome === "W") return "win";
+    if (match.outcome === "D") return "draw";
     return "loss";
   }
   if (match.penalties) return match.advanced ? "draw" : "loss";
-  if (match.outcome === "V") return "win";
+  if (match.outcome === "W") return "win";
   return "loss";
 }
 

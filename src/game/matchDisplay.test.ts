@@ -9,15 +9,15 @@ import {
 import type { MatchResult } from "./types";
 
 const baseMatch: MatchResult = {
-  phase: "GRUPOS",
+  phase: "GROUP",
   opp: "Test",
   oppOverall: 70,
   gf: 2,
   ga: 1,
-  outcome: "V",
+  outcome: "W",
   advanced: true,
-  oppSel: "BRA",
-  oppCopa: 1970,
+  oppTeam: "BRA",
+  oppYear: 1970,
   scorers: ["Pelé", "Garrincha"],
   conceded: ["Müller"],
   goals: [
@@ -29,8 +29,8 @@ const baseMatch: MatchResult = {
 
 describe("matchDisplay", () => {
   it("maps phase labels to EN", () => {
-    expect(phaseLabel("GRUPOS")).toBe("GROUPS");
-    expect(phaseLabel("OITAVAS")).toBe("ROUND OF 16");
+    expect(phaseLabel("GROUP")).toBe("GROUPS");
+    expect(phaseLabel("R16")).toBe("ROUND OF 16");
   });
 
   it("computes running score from goals", () => {
@@ -50,7 +50,7 @@ describe("matchDisplay", () => {
 
   it("shows World Cup Winner for final penalty win", () => {
     expect(penaltyResultLabel("FINAL", true)).toBe("World Cup Winner");
-    expect(penaltyResultLabel("OITAVAS", true)).toBe("advanced");
+    expect(penaltyResultLabel("R16", true)).toBe("advanced");
     expect(penaltyResultLabel("FINAL", false)).toBe("out");
   });
 

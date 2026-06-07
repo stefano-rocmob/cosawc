@@ -25,8 +25,8 @@ export function GroupStandings({ table, advanced }: Props) {
             const rank = i + 1;
             const label = row.me
               ? USER_TEAM_NAME
-              : row.sel
-                ? `${countryDisplay(row.sel).flag} ${countryDisplay(row.sel).name.toUpperCase()}`
+              : row.team
+                ? `${countryDisplay(row.team).flag} ${countryDisplay(row.team).name.toUpperCase()}`
                 : "—";
             return (
               <tr key={i} className={row.me ? "is-me" : ""}>

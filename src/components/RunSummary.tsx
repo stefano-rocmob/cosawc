@@ -31,7 +31,7 @@ function SummaryRow({ match }: { match: MatchResult }) {
           <div className="run-match-opp">
             <span className="run-vs">vs</span>
             <span className="run-opp-name">
-              {opponentLabel(match.oppSel, match.oppCopa)}
+              {opponentLabel(match.oppTeam, match.oppYear)}
             </span>
           </div>
           {match.scorers.length > 0 && (
@@ -82,7 +82,7 @@ export function RunSummary({ result, overall, onReplay, onSeeCard }: Props) {
     <div className="run-summary">
       <div className="run-summary-list">
         {groupMatches.map((match, i) => (
-          <SummaryRow key={`group-${match.oppSel}-${i}`} match={match} />
+          <SummaryRow key={`group-${match.oppTeam}-${i}`} match={match} />
         ))}
 
         {groupMatch?.groupTable && (
@@ -93,7 +93,7 @@ export function RunSummary({ result, overall, onReplay, onSeeCard }: Props) {
         )}
 
         {knockoutMatches.map((match, i) => (
-          <SummaryRow key={`ko-${match.oppSel}-${i}`} match={match} />
+          <SummaryRow key={`ko-${match.oppTeam}-${i}`} match={match} />
         ))}
       </div>
 

@@ -2,10 +2,10 @@ import type { Player, SquadFile } from "./types";
 import { catalogKey, slugForSquad } from "./squadCatalog";
 
 export type SquadLoader = {
-  ensure: (sel: string, copa: number) => Promise<Player[]>;
-  ensureMany: (refs: { sel: string; copa: number }[]) => Promise<void>;
-  get: (sel: string, copa: number) => Player[];
-  has: (sel: string, copa: number) => boolean;
+  ensure: (team: string, year: number) => Promise<Player[]>;
+  ensureMany: (refs: { team: string; year: number }[]) => Promise<void>;
+  get: (team: string, year: number) => Player[];
+  has: (team: string, year: number) => boolean;
 };
 
 export function createSquadLoader(
@@ -41,38 +41,38 @@ export function createSquadLoader(
     return promise;
   }
 
-  function resolveSlug(sel: string, copa: number): string {
-    const slug = slugForSquad(sel, copa);
+  function resolveSlug(team: string, year: number): string {
+    const slug = slugForSquad(team, year);
     if (!slug) {
-      throw new Error(`Squad ${catalogKey(sel, copa)} not in catalog`);
+      throw new Error(`Squad ${catalogKey(team, year)} not in catalog`);
     }
     return slug;
   }
 
   return {
-    async ensure(sel, copa) {
-      return loadSlug(resolveSlug(sel, copa));
+    async ensure(team, year) {
+      return loadSlug(resolveSlug(team, year));
     },
     async ensureMany(refs) {
       const seen = new Set<string>();
       const tasks: Promise<Player[]>[] = [];
-      for (const { sel, copa } of refs) {
-        const key = catalogKey(sel, copa);
+      for (const { team, year } of refs) {
+        const key = catalogKey(team, year);
         if (seen.has(key)) continue;
         seen.add(key);
-        tasks.push(loadSlug(resolveSlug(sel, copa)));
+        tasks.push(loadSlug(resolveSlug(team, year)));
       }
       await Promise.all(tasks);
     },
-    get(sel, copa) {
-      const squad = cache.get(resolveSlug(sel, copa));
+    get(team, year) {
+      const squad = cache.get(resolveSlug(team, year));
       if (!squad) {
-        throw new Error(`Squad ${catalogKey(sel, copa)} not loaded`);
+        throw new Error(`Squad ${catalogKey(team, year)} not loaded`);
       }
       return squad;
     },
-    has(sel, copa) {
-      const slug = slugForSquad(sel, copa);
+    has(team, year) {
+      const slug = slugForSquad(team, year);
       return slug !== undefined && cache.has(slug);
     },
   };

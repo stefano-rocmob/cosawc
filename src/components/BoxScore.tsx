@@ -51,7 +51,7 @@ export function BoxScore({ draft, scores }: Props) {
                   {player ? formatBoxScorePlayer(player) : "—"}
                 </td>
                 <td className="val">
-                  {player ? (statsVisible ? player.force : "?") : ""}
+                  {player ? (statsVisible ? player.rating : "?") : ""}
                 </td>
               </tr>
             );

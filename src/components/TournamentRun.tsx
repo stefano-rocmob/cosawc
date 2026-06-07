@@ -171,7 +171,7 @@ export function TournamentRun({
           {started &&
             settledGroupMatches.map((m, i) => (
               <MatchRevealCard
-                key={`group-done-${m.oppSel}-${m.oppCopa}-${i}`}
+                key={`group-done-${m.oppTeam}-${m.oppYear}-${i}`}
                 {...completedMatchProps(m)}
               />
             ))}
@@ -195,7 +195,7 @@ export function TournamentRun({
           {started &&
             settledKnockoutMatches.map((m, i) => (
               <MatchRevealCard
-                key={`ko-done-${m.oppSel}-${m.oppCopa}-${i}`}
+                key={`ko-done-${m.oppTeam}-${m.oppYear}-${i}`}
                 {...completedMatchProps(m)}
               />
             ))}

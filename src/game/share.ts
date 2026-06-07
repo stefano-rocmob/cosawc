@@ -9,7 +9,7 @@ export function encodeSharePayload(state: GameState): string {
     mode: state.draft.mode,
     players: state.draft.filled
       .filter((p): p is NonNullable<typeof p> => p !== null)
-      .map((p) => p.playerId),
+      .map((p) => p.id),
     rerollsLeft: state.draft.rerollsLeft,
     rollIndex: state.rollIndex,
   };

@@ -40,8 +40,8 @@ export function MatchReveal({
 
 function FixtureCard({ match }: { match: MatchResult }) {
   const isFinal = match.phase === "FINAL";
-  const isGroup = match.phase === "GRUPOS";
-  const won = isGroup ? match.outcome === "V" : match.advanced;
+  const isGroup = match.phase === "GROUP";
+  const won = isGroup ? match.outcome === "W" : match.advanced;
 
   return (
     <div
@@ -56,7 +56,7 @@ function FixtureCard({ match }: { match: MatchResult }) {
           <div className="eyebrow">{match.phase}</div>
           <div>{match.opp}</div>
           <div className="eyebrow">
-            {match.oppSel} {match.oppCopa} · OVR {match.oppOverall}
+            {match.oppTeam} {match.oppYear} · OVR {match.oppOverall}
           </div>
         </div>
         <div className="fixture-score">
@@ -93,7 +93,7 @@ function FixtureCard({ match }: { match: MatchResult }) {
             <tbody>
               {match.groupTable.map((row, i) => (
                 <tr key={i} className={row.me ? "me" : ""}>
-                  <td>{row.me ? USER_TEAM_NAME : `${row.sel} ${row.copa}`}</td>
+                  <td>{row.me ? USER_TEAM_NAME : `${row.team} ${row.year}`}</td>
                   <td>{row.pts}</td>
                   <td>{row.gd}</td>
                   <td>{row.gf}</td>

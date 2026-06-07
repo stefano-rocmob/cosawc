@@ -1,44 +1,44 @@
 export type PositionCode =
-  | "GOL"
-  | "LD"
-  | "ZAG"
-  | "LE"
-  | "MD"
-  | "ME"
-  | "VOL"
-  | "MC"
-  | "MEI"
-  | "PD"
-  | "CA"
-  | "PE";
+  | "GK"
+  | "RB"
+  | "LB"
+  | "CB"
+  | "RM"
+  | "LM"
+  | "DM"
+  | "CM"
+  | "AM"
+  | "RW"
+  | "ST"
+  | "LW";
 
 export type Player = {
-  playerId: string;
+  id: string;
   name: string;
-  sel: string;
-  copa: number;
+  team: string;
+  year: number;
   positions: PositionCode[];
   number: number;
-  force: number;
+  rating: number;
   legend: boolean;
 };
 
 export type SquadFile = {
-  sel: string;
-  copa: number;
+  team: string;
+  year: number;
   squad: Player[];
 };
 
 export type SquadIndexItem = {
-  sel: string;
-  copa: number;
+  team: string;
+  year: number;
   overall: number;
   band: number;
 };
 
 export type SquadCatalogItem = {
-  sel: string;
-  copa: number;
+  team: string;
+  year: number;
   slug: string;
 };
 
@@ -52,9 +52,9 @@ export type FormationKey =
   | "4-5-1"
   | "3-4-3";
 
-export type StyleKey = "defensivo" | "equilibrado" | "ofensivo";
-export type ModeKey = "classico" | "almanaque";
-export type RerollAxis = "copa" | "sel";
+export type StyleKey = "defensive" | "balanced" | "offensive";
+export type ModeKey = "classic" | "memory";
+export type RerollAxis = "year" | "team";
 
 export type FormationSlot = {
   pos: PositionCode;
@@ -68,11 +68,11 @@ export type DraftState = {
   mode: ModeKey;
   slots: FormationSlot[];
   filled: (Player | null)[];
-  usedPlayerIds: string[];
+  usedIds: string[];
   rerollsLeft: number;
 };
 
-export type SquadRef = { sel: string; copa: number };
+export type SquadRef = { team: string; year: number };
 
 export type GameState = {
   seed: string;
@@ -83,7 +83,7 @@ export type GameState = {
   recent: SquadRef[];
 };
 
-export type MatchOutcome = "V" | "E" | "D";
+export type MatchOutcome = "W" | "D" | "L";
 
 export type GoalEvent = {
   min: number;
@@ -96,8 +96,8 @@ export type GroupStandingRow = {
   pts: number;
   gd: number;
   gf: number;
-  sel?: string;
-  copa?: number;
+  team?: string;
+  year?: number;
 };
 
 export type PenaltyDisplay = {
@@ -116,8 +116,8 @@ export type MatchResult = {
   outcome: MatchOutcome;
   advanced: boolean;
   penalties?: boolean;
-  oppSel: string;
-  oppCopa: number;
+  oppTeam: string;
+  oppYear: number;
   scorers: string[];
   conceded: string[];
   goals: GoalEvent[];

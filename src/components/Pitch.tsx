@@ -58,8 +58,8 @@ export function Pitch({
                       <span className="legend-badge" title="Legend" />
                     )}
                     <span className="name">{player.name}</span>
-                    <span className="force">
-                      {statsVisible ? player.force : "?"}
+                    <span className="rating">
+                      {statsVisible ? player.rating : "?"}
                     </span>
                   </>
                 ) : (

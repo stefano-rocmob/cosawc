@@ -1,1252 +1,1252 @@
 [
   {
-    "sel": "BRA",
-    "copa": 1950,
-    "slug": "BRA-1950-f7784c0b"
+    "team": "BRA",
+    "year": 1950,
+    "slug": "BRA-1950-10aa8e3e"
   },
   {
-    "sel": "CHI",
-    "copa": 1950,
-    "slug": "CHI-1950-4d5ff96e"
+    "team": "CHI",
+    "year": 1950,
+    "slug": "CHI-1950-578ece35"
   },
   {
-    "sel": "ENG",
-    "copa": 1950,
-    "slug": "ENG-1950-bd1e7a8a"
+    "team": "ENG",
+    "year": 1950,
+    "slug": "ENG-1950-e935163f"
   },
   {
-    "sel": "ESP",
-    "copa": 1950,
-    "slug": "ESP-1950-37ae195f"
+    "team": "ESP",
+    "year": 1950,
+    "slug": "ESP-1950-b69fa613"
   },
   {
-    "sel": "ITA",
-    "copa": 1950,
-    "slug": "ITA-1950-e7f51af6"
+    "team": "ITA",
+    "year": 1950,
+    "slug": "ITA-1950-22da3df7"
   },
   {
-    "sel": "MEX",
-    "copa": 1950,
-    "slug": "MEX-1950-34bf1476"
+    "team": "MEX",
+    "year": 1950,
+    "slug": "MEX-1950-35852a9d"
   },
   {
-    "sel": "PAR",
-    "copa": 1950,
-    "slug": "PAR-1950-7584d619"
+    "team": "PAR",
+    "year": 1950,
+    "slug": "PAR-1950-a2c16c2e"
   },
   {
-    "sel": "SUI",
-    "copa": 1950,
-    "slug": "SUI-1950-927eba0f"
+    "team": "SUI",
+    "year": 1950,
+    "slug": "SUI-1950-c7b3f602"
   },
   {
-    "sel": "SWE",
-    "copa": 1950,
-    "slug": "SWE-1950-1b6b9bda"
+    "team": "SWE",
+    "year": 1950,
+    "slug": "SWE-1950-cd8be2f4"
   },
   {
-    "sel": "URU",
-    "copa": 1950,
-    "slug": "URU-1950-e944d999"
+    "team": "URU",
+    "year": 1950,
+    "slug": "URU-1950-79296e8d"
   },
   {
-    "sel": "USA",
-    "copa": 1950,
-    "slug": "USA-1950-546b95c2"
+    "team": "USA",
+    "year": 1950,
+    "slug": "USA-1950-7c771e4a"
   },
   {
-    "sel": "YUG",
-    "copa": 1950,
-    "slug": "YUG-1950-598ccc8e"
+    "team": "YUG",
+    "year": 1950,
+    "slug": "YUG-1950-625cb84a"
   },
   {
-    "sel": "AUT",
-    "copa": 1954,
-    "slug": "AUT-1954-c8428152"
+    "team": "AUT",
+    "year": 1954,
+    "slug": "AUT-1954-5d60acd1"
   },
   {
-    "sel": "BRA",
-    "copa": 1954,
-    "slug": "BRA-1954-9c1e700e"
+    "team": "BRA",
+    "year": 1954,
+    "slug": "BRA-1954-14aa948a"
   },
   {
-    "sel": "ENG",
-    "copa": 1954,
-    "slug": "ENG-1954-191f7705"
+    "team": "ENG",
+    "year": 1954,
+    "slug": "ENG-1954-e5350ff3"
   },
   {
-    "sel": "FRA",
-    "copa": 1954,
-    "slug": "FRA-1954-cb2de5df"
+    "team": "FRA",
+    "year": 1954,
+    "slug": "FRA-1954-a929acc6"
   },
   {
-    "sel": "GER",
-    "copa": 1954,
-    "slug": "GER-1954-06d313ed"
+    "team": "GER",
+    "year": 1954,
+    "slug": "GER-1954-81118dbd"
   },
   {
-    "sel": "HUN",
-    "copa": 1954,
-    "slug": "HUN-1954-a90b62df"
+    "team": "HUN",
+    "year": 1954,
+    "slug": "HUN-1954-578826d2"
   },
   {
-    "sel": "ITA",
-    "copa": 1954,
-    "slug": "ITA-1954-ba5e3a72"
+    "team": "ITA",
+    "year": 1954,
+    "slug": "ITA-1954-1eda37ab"
   },
   {
-    "sel": "SCO",
-    "copa": 1954,
-    "slug": "SCO-1954-e99c4013"
+    "team": "SCO",
+    "year": 1954,
+    "slug": "SCO-1954-6d973e1a"
   },
   {
-    "sel": "SUI",
-    "copa": 1954,
-    "slug": "SUI-1954-9870c624"
+    "team": "SUI",
+    "year": 1954,
+    "slug": "SUI-1954-c3b3efb6"
   },
   {
-    "sel": "TCH",
-    "copa": 1954,
-    "slug": "TCH-1954-53fd9832"
+    "team": "TCH",
+    "year": 1954,
+    "slug": "TCH-1954-cc810656"
   },
   {
-    "sel": "TUR",
-    "copa": 1954,
-    "slug": "TUR-1954-d36d5600"
+    "team": "TUR",
+    "year": 1954,
+    "slug": "TUR-1954-32617c1a"
   },
   {
-    "sel": "URU",
-    "copa": 1954,
-    "slug": "URU-1954-71080984"
+    "team": "URU",
+    "year": 1954,
+    "slug": "URU-1954-75296841"
   },
   {
-    "sel": "YUG",
-    "copa": 1954,
-    "slug": "YUG-1954-ff5e64f9"
+    "team": "YUG",
+    "year": 1954,
+    "slug": "YUG-1954-5e5cb1fe"
   },
   {
-    "sel": "ARG",
-    "copa": 1958,
-    "slug": "ARG-1958-d03f17b4"
+    "team": "ARG",
+    "year": 1958,
+    "slug": "ARG-1958-b7ae4737"
   },
   {
-    "sel": "BRA",
-    "copa": 1958,
-    "slug": "BRA-1958-013e8269"
+    "team": "BRA",
+    "year": 1958,
+    "slug": "BRA-1958-08aa81a6"
   },
   {
-    "sel": "ENG",
-    "copa": 1958,
-    "slug": "ENG-1958-daac4730"
+    "team": "ENG",
+    "year": 1958,
+    "slug": "ENG-1958-f13522d7"
   },
   {
-    "sel": "FRA",
-    "copa": 1958,
-    "slug": "FRA-1958-e03022d7"
+    "team": "FRA",
+    "year": 1958,
+    "slug": "FRA-1958-b529bfaa"
   },
   {
-    "sel": "GER",
-    "copa": 1958,
-    "slug": "GER-1958-7ddeef5f"
+    "team": "GER",
+    "year": 1958,
+    "slug": "GER-1958-75117ad9"
   },
   {
-    "sel": "HUN",
-    "copa": 1958,
-    "slug": "HUN-1958-58e3213e"
+    "team": "HUN",
+    "year": 1958,
+    "slug": "HUN-1958-5b882d1e"
   },
   {
-    "sel": "NIR",
-    "copa": 1958,
-    "slug": "NIR-1958-efd234e3"
+    "team": "NIR",
+    "year": 1958,
+    "slug": "NIR-1958-1e30b898"
   },
   {
-    "sel": "PAR",
-    "copa": 1958,
-    "slug": "PAR-1958-1760a62e"
+    "team": "PAR",
+    "year": 1958,
+    "slug": "PAR-1958-9ac15f96"
   },
   {
-    "sel": "SWE",
-    "copa": 1958,
-    "slug": "SWE-1958-1358b240"
+    "team": "SWE",
+    "year": 1958,
+    "slug": "SWE-1958-c58bd65c"
   },
   {
-    "sel": "URS",
-    "copa": 1958,
-    "slug": "URS-1958-afd887ee"
+    "team": "URS",
+    "year": 1958,
+    "slug": "URS-1958-cef61c37"
   },
   {
-    "sel": "WAL",
-    "copa": 1958,
-    "slug": "WAL-1958-87111af8"
+    "team": "WAL",
+    "year": 1958,
+    "slug": "WAL-1958-a5ee2d1f"
   },
   {
-    "sel": "YUG",
-    "copa": 1958,
-    "slug": "YUG-1958-ac04696b"
+    "team": "YUG",
+    "year": 1958,
+    "slug": "YUG-1958-5a5cabb2"
   },
   {
-    "sel": "ARG",
-    "copa": 1962,
-    "slug": "ARG-1962-d278f1d4"
+    "team": "ARG",
+    "year": 1962,
+    "slug": "ARG-1962-3fa6ce8a"
   },
   {
-    "sel": "BRA",
-    "copa": 1962,
-    "slug": "BRA-1962-585f7ea7"
+    "team": "BRA",
+    "year": 1962,
+    "slug": "BRA-1962-08a8430f"
   },
   {
-    "sel": "CHI",
-    "copa": 1962,
-    "slug": "CHI-1962-7381e647"
+    "team": "CHI",
+    "year": 1962,
+    "slug": "CHI-1962-5b911318"
   },
   {
-    "sel": "ENG",
-    "copa": 1962,
-    "slug": "ENG-1962-44d83955"
+    "team": "ENG",
+    "year": 1962,
+    "slug": "ENG-1962-792daa2a"
   },
   {
-    "sel": "ESP",
-    "copa": 1962,
-    "slug": "ESP-1962-5dde5cde"
+    "team": "ESP",
+    "year": 1962,
+    "slug": "ESP-1962-469839fe"
   },
   {
-    "sel": "GER",
-    "copa": 1962,
-    "slug": "GER-1962-d869e1cc"
+    "team": "GER",
+    "year": 1962,
+    "slug": "GER-1962-8113cc54"
   },
   {
-    "sel": "HUN",
-    "copa": 1962,
-    "slug": "HUN-1962-3a59756b"
+    "team": "HUN",
+    "year": 1962,
+    "slug": "HUN-1962-eb853e37"
   },
   {
-    "sel": "ITA",
-    "copa": 1962,
-    "slug": "ITA-1962-b81b270f"
+    "team": "ITA",
+    "year": 1962,
+    "slug": "ITA-1962-12d36902"
   },
   {
-    "sel": "MEX",
-    "copa": 1962,
-    "slug": "MEX-1962-976fab8d"
+    "team": "MEX",
+    "year": 1962,
+    "slug": "MEX-1962-998806a0"
   },
   {
-    "sel": "TCH",
-    "copa": 1962,
-    "slug": "TCH-1962-4381dfa0"
+    "team": "TCH",
+    "year": 1962,
+    "slug": "TCH-1962-c87ec173"
   },
   {
-    "sel": "URS",
-    "copa": 1962,
-    "slug": "URS-1962-cd47378c"
+    "team": "URS",
+    "year": 1962,
+    "slug": "URS-1962-56eea38a"
   },
   {
-    "sel": "YUG",
-    "copa": 1962,
-    "slug": "YUG-1962-bf66b3df"
+    "team": "YUG",
+    "year": 1962,
+    "slug": "YUG-1962-5a5a6d1b"
   },
   {
-    "sel": "ARG",
-    "copa": 1966,
-    "slug": "ARG-1966-29bd2c4c"
+    "team": "ARG",
+    "year": 1966,
+    "slug": "ARG-1966-3ba6c83e"
   },
   {
-    "sel": "BRA",
-    "copa": 1966,
-    "slug": "BRA-1966-d0b135d0"
+    "team": "BRA",
+    "year": 1966,
+    "slug": "BRA-1966-04a83cc3"
   },
   {
-    "sel": "ENG",
-    "copa": 1966,
-    "slug": "ENG-1966-563bbe24"
+    "team": "ENG",
+    "year": 1966,
+    "slug": "ENG-1966-752da3de"
   },
   {
-    "sel": "ESP",
-    "copa": 1966,
-    "slug": "ESP-1966-d85a75a4"
+    "team": "ESP",
+    "year": 1966,
+    "slug": "ESP-1966-4a98404a"
   },
   {
-    "sel": "FRA",
-    "copa": 1966,
-    "slug": "FRA-1966-058f0f96"
+    "team": "FRA",
+    "year": 1966,
+    "slug": "FRA-1966-a9276e2f"
   },
   {
-    "sel": "GER",
-    "copa": 1966,
-    "slug": "GER-1966-d0fcb8df"
+    "team": "GER",
+    "year": 1966,
+    "slug": "GER-1966-7d13c608"
   },
   {
-    "sel": "HUN",
-    "copa": 1966,
-    "slug": "HUN-1966-2ae7123a"
+    "team": "HUN",
+    "year": 1966,
+    "slug": "HUN-1966-e78537eb"
   },
   {
-    "sel": "ITA",
-    "copa": 1966,
-    "slug": "ITA-1966-6aec38fa"
+    "team": "ITA",
+    "year": 1966,
+    "slug": "ITA-1966-0ed362b6"
   },
   {
-    "sel": "MEX",
-    "copa": 1966,
-    "slug": "MEX-1966-ccec0bd7"
+    "team": "MEX",
+    "year": 1966,
+    "slug": "MEX-1966-9d880cec"
   },
   {
-    "sel": "POR",
-    "copa": 1966,
-    "slug": "POR-1966-ecd3d76c"
+    "team": "POR",
+    "year": 1966,
+    "slug": "POR-1966-0dfee561"
   },
   {
-    "sel": "URS",
-    "copa": 1966,
-    "slug": "URS-1966-7389e73d"
+    "team": "URS",
+    "year": 1966,
+    "slug": "URS-1966-52ee9d3e"
   },
   {
-    "sel": "BEL",
-    "copa": 1970,
-    "slug": "BEL-1970-d3603631"
+    "team": "BEL",
+    "year": 1970,
+    "slug": "BEL-1970-f5df9ff0"
   },
   {
-    "sel": "BRA",
-    "copa": 1970,
-    "slug": "BRA-1970-008c9ef9"
+    "team": "BRA",
+    "year": 1970,
+    "slug": "BRA-1970-04a5fe2c"
   },
   {
-    "sel": "BUL",
-    "copa": 1970,
-    "slug": "BUL-1970-8fa82926"
+    "team": "BUL",
+    "year": 1970,
+    "slug": "BUL-1970-a39eac40"
   },
   {
-    "sel": "ENG",
-    "copa": 1970,
-    "slug": "ENG-1970-23cf2edc"
+    "team": "ENG",
+    "year": 1970,
+    "slug": "ENG-1970-7d2fef0d"
   },
   {
-    "sel": "GER",
-    "copa": 1970,
-    "slug": "GER-1970-c2caee74"
+    "team": "GER",
+    "year": 1970,
+    "slug": "GER-1970-e916aea3"
   },
   {
-    "sel": "ITA",
-    "copa": 1970,
-    "slug": "ITA-1970-c7dce843"
+    "team": "ITA",
+    "year": 1970,
+    "slug": "ITA-1970-16d5ade5"
   },
   {
-    "sel": "MEX",
-    "copa": 1970,
-    "slug": "MEX-1970-c8c6f229"
+    "team": "MEX",
+    "year": 1970,
+    "slug": "MEX-1970-a18a51cf"
   },
   {
-    "sel": "PER",
-    "copa": 1970,
-    "slug": "PER-1970-7975cbfb"
+    "team": "PER",
+    "year": 1970,
+    "slug": "PER-1970-1cb96960"
   },
   {
-    "sel": "ROU",
-    "copa": 1970,
-    "slug": "ROU-1970-b4ebef0c"
+    "team": "ROU",
+    "year": 1970,
+    "slug": "ROU-1970-0ed8b127"
   },
   {
-    "sel": "URU",
-    "copa": 1970,
-    "slug": "URU-1970-0563329f"
+    "team": "URU",
+    "year": 1970,
+    "slug": "URU-1970-e52e95bf"
   },
   {
-    "sel": "ARG",
-    "copa": 1974,
-    "slug": "ARG-1974-01b799f9"
+    "team": "ARG",
+    "year": 1974,
+    "slug": "ARG-1974-bfa9d6a1"
   },
   {
-    "sel": "BRA",
-    "copa": 1974,
-    "slug": "BRA-1974-c27d415f"
+    "team": "BRA",
+    "year": 1974,
+    "slug": "BRA-1974-00a5f7e0"
   },
   {
-    "sel": "CHI",
-    "copa": 1974,
-    "slug": "CHI-1974-6f51a496"
+    "team": "CHI",
+    "year": 1974,
+    "slug": "CHI-1974-df94217b"
   },
   {
-    "sel": "GER",
-    "copa": 1974,
-    "slug": "GER-1974-89ccf8fa"
+    "team": "GER",
+    "year": 1974,
+    "slug": "GER-1974-ed16b4ef"
   },
   {
-    "sel": "ITA",
-    "copa": 1974,
-    "slug": "ITA-1974-a1c388a3"
+    "team": "ITA",
+    "year": 1974,
+    "slug": "ITA-1974-12d5a799"
   },
   {
-    "sel": "NED",
-    "copa": 1974,
-    "slug": "NED-1974-198e7987"
+    "team": "NED",
+    "year": 1974,
+    "slug": "NED-1974-1c15a0a8"
   },
   {
-    "sel": "POL",
-    "copa": 1974,
-    "slug": "POL-1974-0d345835"
+    "team": "POL",
+    "year": 1974,
+    "slug": "POL-1974-48b7e480"
   },
   {
-    "sel": "SCO",
-    "copa": 1974,
-    "slug": "SCO-1974-212066bf"
+    "team": "SCO",
+    "year": 1974,
+    "slug": "SCO-1974-d991d7f0"
   },
   {
-    "sel": "SWE",
-    "copa": 1974,
-    "slug": "SWE-1974-8e21b6b0"
+    "team": "SWE",
+    "year": 1974,
+    "slug": "SWE-1974-bd9046f2"
   },
   {
-    "sel": "URU",
-    "copa": 1974,
-    "slug": "URU-1974-3b52f1ca"
+    "team": "URU",
+    "year": 1974,
+    "slug": "URU-1974-e12e8f73"
   },
   {
-    "sel": "ARG",
-    "copa": 1978,
-    "slug": "ARG-1978-1b6a3c5f"
+    "team": "ARG",
+    "year": 1978,
+    "slug": "ARG-1978-bba9d055"
   },
   {
-    "sel": "AUT",
-    "copa": 1978,
-    "slug": "AUT-1978-f75a5ffa"
+    "team": "AUT",
+    "year": 1978,
+    "slug": "AUT-1978-d565e6e7"
   },
   {
-    "sel": "BRA",
-    "copa": 1978,
-    "slug": "BRA-1978-5913f2c4"
+    "team": "BRA",
+    "year": 1978,
+    "slug": "BRA-1978-0ca60ac4"
   },
   {
-    "sel": "ESP",
-    "copa": 1978,
-    "slug": "ESP-1978-9a4b5ad2"
+    "team": "ESP",
+    "year": 1978,
+    "slug": "ESP-1978-c29b3bc9"
   },
   {
-    "sel": "FRA",
-    "copa": 1978,
-    "slug": "FRA-1978-4109ee6c"
+    "team": "FRA",
+    "year": 1978,
+    "slug": "FRA-1978-29246618"
   },
   {
-    "sel": "ITA",
-    "copa": 1978,
-    "slug": "ITA-1978-44b516c0"
+    "team": "ITA",
+    "year": 1978,
+    "slug": "ITA-1978-1ed5ba7d"
   },
   {
-    "sel": "MEX",
-    "copa": 1978,
-    "slug": "MEX-1978-587c42ed"
+    "team": "MEX",
+    "year": 1978,
+    "slug": "MEX-1978-a98a5e67"
   },
   {
-    "sel": "NED",
-    "copa": 1978,
-    "slug": "NED-1978-8a58bd0b"
+    "team": "NED",
+    "year": 1978,
+    "slug": "NED-1978-18159a5c"
   },
   {
-    "sel": "PER",
-    "copa": 1978,
-    "slug": "PER-1978-a009b1eb"
+    "team": "PER",
+    "year": 1978,
+    "slug": "PER-1978-24b975f8"
   },
   {
-    "sel": "POL",
-    "copa": 1978,
-    "slug": "POL-1978-e0340a39"
+    "team": "POL",
+    "year": 1978,
+    "slug": "POL-1978-54b7f764"
   },
   {
-    "sel": "SCO",
-    "copa": 1978,
-    "slug": "SCO-1978-564a16ba"
+    "team": "SCO",
+    "year": 1978,
+    "slug": "SCO-1978-e591ead4"
   },
   {
-    "sel": "ALG",
-    "copa": 1982,
-    "slug": "ALG-1982-5735b11b"
+    "team": "ALG",
+    "year": 1982,
+    "slug": "ALG-1982-784a38f6"
   },
   {
-    "sel": "ARG",
-    "copa": 1982,
-    "slug": "ARG-1982-30b54478"
+    "team": "ARG",
+    "year": 1982,
+    "slug": "ARG-1982-3fb5d914"
   },
   {
-    "sel": "AUT",
-    "copa": 1982,
-    "slug": "AUT-1982-1dd81ba9"
+    "team": "AUT",
+    "year": 1982,
+    "slug": "AUT-1982-d568257e"
   },
   {
-    "sel": "BEL",
-    "copa": 1982,
-    "slug": "BEL-1982-62eaa814"
+    "team": "BEL",
+    "year": 1982,
+    "slug": "BEL-1982-12049cdd"
   },
   {
-    "sel": "BRA",
-    "copa": 1982,
-    "slug": "BRA-1982-5b597f8e"
+    "team": "BRA",
+    "year": 1982,
+    "slug": "BRA-1982-908f8141"
   },
   {
-    "sel": "CMR",
-    "copa": 1982,
-    "slug": "CMR-1982-5f48085c"
+    "team": "CMR",
+    "year": 1982,
+    "slug": "CMR-1982-99c1a19e"
   },
   {
-    "sel": "ENG",
-    "copa": 1982,
-    "slug": "ENG-1982-d8d9e331"
+    "team": "ENG",
+    "year": 1982,
+    "slug": "ENG-1982-793cb4b4"
   },
   {
-    "sel": "FRA",
-    "copa": 1982,
-    "slug": "FRA-1982-6fff2200"
+    "team": "FRA",
+    "year": 1982,
+    "slug": "FRA-1982-bd4a1fed"
   },
   {
-    "sel": "GER",
-    "copa": 1982,
-    "slug": "GER-1982-6a6a9c94"
+    "team": "GER",
+    "year": 1982,
+    "slug": "GER-1982-8104c1ca"
   },
   {
-    "sel": "ITA",
-    "copa": 1982,
-    "slug": "ITA-1982-cb3e8eb5"
+    "team": "ITA",
+    "year": 1982,
+    "slug": "ITA-1982-92ba9a9c"
   },
   {
-    "sel": "POL",
-    "copa": 1982,
-    "slug": "POL-1982-72621d68"
+    "team": "POL",
+    "year": 1982,
+    "slug": "POL-1982-58a23761"
   },
   {
-    "sel": "SCO",
-    "copa": 1982,
-    "slug": "SCO-1982-be79cee5"
+    "team": "SCO",
+    "year": 1982,
+    "slug": "SCO-1982-697b6151"
   },
   {
-    "sel": "ARG",
-    "copa": 1986,
-    "slug": "ARG-1986-c6660fb9"
+    "team": "ARG",
+    "year": 1986,
+    "slug": "ARG-1986-3bb5d2c8"
   },
   {
-    "sel": "BEL",
-    "copa": 1986,
-    "slug": "BEL-1986-cb187883"
+    "team": "BEL",
+    "year": 1986,
+    "slug": "BEL-1986-0e049691"
   },
   {
-    "sel": "BRA",
-    "copa": 1986,
-    "slug": "BRA-1986-51998eae"
+    "team": "BRA",
+    "year": 1986,
+    "slug": "BRA-1986-948f878d"
   },
   {
-    "sel": "BUL",
-    "copa": 1986,
-    "slug": "BUL-1986-d0da2273"
+    "team": "BUL",
+    "year": 1986,
+    "slug": "BUL-1986-3bc46c61"
   },
   {
-    "sel": "DEN",
-    "copa": 1986,
-    "slug": "DEN-1986-27a08d5b"
+    "team": "DEN",
+    "year": 1986,
+    "slug": "DEN-1986-3457ce61"
   },
   {
-    "sel": "ENG",
-    "copa": 1986,
-    "slug": "ENG-1986-9cbf0804"
+    "team": "ENG",
+    "year": 1986,
+    "slug": "ENG-1986-753cae68"
   },
   {
-    "sel": "ESP",
-    "copa": 1986,
-    "slug": "ESP-1986-d22c7552"
+    "team": "ESP",
+    "year": 1986,
+    "slug": "ESP-1986-3a93a9ec"
   },
   {
-    "sel": "FRA",
-    "copa": 1986,
-    "slug": "FRA-1986-2826c4ec"
+    "team": "FRA",
+    "year": 1986,
+    "slug": "FRA-1986-b94a19a1"
   },
   {
-    "sel": "GER",
-    "copa": 1986,
-    "slug": "GER-1986-aed6ca0b"
+    "team": "GER",
+    "year": 1986,
+    "slug": "GER-1986-7d04bb7e"
   },
   {
-    "sel": "ITA",
-    "copa": 1986,
-    "slug": "ITA-1986-a2f072f8"
+    "team": "ITA",
+    "year": 1986,
+    "slug": "ITA-1986-8eba9450"
   },
   {
-    "sel": "MAR",
-    "copa": 1986,
-    "slug": "MAR-1986-73335111"
+    "team": "MAR",
+    "year": 1986,
+    "slug": "MAR-1986-5fea7c98"
   },
   {
-    "sel": "MEX",
-    "copa": 1986,
-    "slug": "MEX-1986-363480bd"
+    "team": "MEX",
+    "year": 1986,
+    "slug": "MEX-1986-ad8ca34a"
   },
   {
-    "sel": "PAR",
-    "copa": 1986,
-    "slug": "PAR-1986-0e2244ca"
+    "team": "PAR",
+    "year": 1986,
+    "slug": "PAR-1986-26a6657d"
   },
   {
-    "sel": "POL",
-    "copa": 1986,
-    "slug": "POL-1986-9b9db644"
+    "team": "POL",
+    "year": 1986,
+    "slug": "POL-1986-5ca23dad"
   },
   {
-    "sel": "URU",
-    "copa": 1986,
-    "slug": "URU-1986-3d8a3e36"
+    "team": "URU",
+    "year": 1986,
+    "slug": "URU-1986-f130e73a"
   },
   {
-    "sel": "ARG",
-    "copa": 1990,
-    "slug": "ARG-1990-4fe030ba"
+    "team": "ARG",
+    "year": 1990,
+    "slug": "ARG-1990-a7b8bb63"
   },
   {
-    "sel": "BRA",
-    "copa": 1990,
-    "slug": "BRA-1990-59ae2e7a"
+    "team": "BRA",
+    "year": 1990,
+    "slug": "BRA-1990-888d3612"
   },
   {
-    "sel": "CMR",
-    "copa": 1990,
-    "slug": "CMR-1990-5ebb9de2"
+    "team": "CMR",
+    "year": 1990,
+    "slug": "CMR-1990-9dc3e681"
   },
   {
-    "sel": "COL",
-    "copa": 1990,
-    "slug": "COL-1990-f60f4108"
+    "team": "COL",
+    "year": 1990,
+    "slug": "COL-1990-4ec9c309"
   },
   {
-    "sel": "CZE",
-    "copa": 1990,
-    "slug": "CZE-1990-18ae2351"
+    "team": "CZE",
+    "year": 1990,
+    "slug": "CZE-1990-85f1bddb"
   },
   {
-    "sel": "EGY",
-    "copa": 1990,
-    "slug": "EGY-1990-19c2634c"
+    "team": "EGY",
+    "year": 1990,
+    "slug": "EGY-1990-d2fd0b6a"
   },
   {
-    "sel": "ENG",
-    "copa": 1990,
-    "slug": "ENG-1990-c12ddb68"
+    "team": "ENG",
+    "year": 1990,
+    "slug": "ENG-1990-613ecd83"
   },
   {
-    "sel": "GER",
-    "copa": 1990,
-    "slug": "GER-1990-aec587d3"
+    "team": "GER",
+    "year": 1990,
+    "slug": "GER-1990-0507d02d"
   },
   {
-    "sel": "IRL",
-    "copa": 1990,
-    "slug": "IRL-1990-27a14fc6"
+    "team": "IRL",
+    "year": 1990,
+    "slug": "IRL-1990-c7e3a9ec"
   },
   {
-    "sel": "ITA",
-    "copa": 1990,
-    "slug": "ITA-1990-80e2f0c6"
+    "team": "ITA",
+    "year": 1990,
+    "slug": "ITA-1990-9abce5cb"
   },
   {
-    "sel": "NED",
-    "copa": 1990,
-    "slug": "NED-1990-8948a78e"
+    "team": "NED",
+    "year": 1990,
+    "slug": "NED-1990-a423ee4a"
   },
   {
-    "sel": "ROU",
-    "copa": 1990,
-    "slug": "ROU-1990-c5e947c0"
+    "team": "ROU",
+    "year": 1990,
+    "slug": "ROU-1990-fab5ff69"
   },
   {
-    "sel": "SRB",
-    "copa": 1990,
-    "slug": "SRB-1990-b501bb26"
+    "team": "SRB",
+    "year": 1990,
+    "slug": "SRB-1990-be93d860"
   },
   {
-    "sel": "ARG",
-    "copa": 1994,
-    "slug": "ARG-1994-bdcd0ace"
+    "team": "ARG",
+    "year": 1994,
+    "slug": "ARG-1994-abb8c1af"
   },
   {
-    "sel": "BRA",
-    "copa": 1994,
-    "slug": "BRA-1994-52baebcb"
+    "team": "BRA",
+    "year": 1994,
+    "slug": "BRA-1994-848d2fc6"
   },
   {
-    "sel": "BUL",
-    "copa": 1994,
-    "slug": "BUL-1994-e690714c"
+    "team": "BUL",
+    "year": 1994,
+    "slug": "BUL-1994-bbc1644a"
   },
   {
-    "sel": "COL",
-    "copa": 1994,
-    "slug": "COL-1994-426b9a0a"
+    "team": "COL",
+    "year": 1994,
+    "slug": "COL-1994-52c9c955"
   },
   {
-    "sel": "GER",
-    "copa": 1994,
-    "slug": "GER-1994-b47d4269"
+    "team": "GER",
+    "year": 1994,
+    "slug": "GER-1994-0107c9e1"
   },
   {
-    "sel": "ITA",
-    "copa": 1994,
-    "slug": "ITA-1994-938bb2ce"
+    "team": "ITA",
+    "year": 1994,
+    "slug": "ITA-1994-9ebcec17"
   },
   {
-    "sel": "MEX",
-    "copa": 1994,
-    "slug": "MEX-1994-9fcce309"
+    "team": "MEX",
+    "year": 1994,
+    "slug": "MEX-1994-318fb1ad"
   },
   {
-    "sel": "NED",
-    "copa": 1994,
-    "slug": "NED-1994-d73b3100"
+    "team": "NED",
+    "year": 1994,
+    "slug": "NED-1994-a023e7fe"
   },
   {
-    "sel": "NGA",
-    "copa": 1994,
-    "slug": "NGA-1994-bb1536ba"
+    "team": "NGA",
+    "year": 1994,
+    "slug": "NGA-1994-bdd52205"
   },
   {
-    "sel": "ROU",
-    "copa": 1994,
-    "slug": "ROU-1994-baee99f9"
+    "team": "ROU",
+    "year": 1994,
+    "slug": "ROU-1994-feb605b5"
   },
   {
-    "sel": "SWE",
-    "copa": 1994,
-    "slug": "SWE-1994-aa33c650"
+    "team": "SWE",
+    "year": 1994,
+    "slug": "SWE-1994-4995a084"
   },
   {
-    "sel": "USA",
-    "copa": 1994,
-    "slug": "USA-1994-53ff57fd"
+    "team": "USA",
+    "year": 1994,
+    "slug": "USA-1994-e86d3af2"
   },
   {
-    "sel": "ARG",
-    "copa": 1998,
-    "slug": "ARG-1998-139e51a9"
+    "team": "ARG",
+    "year": 1998,
+    "slug": "ARG-1998-afb8c7fb"
   },
   {
-    "sel": "BRA",
-    "copa": 1998,
-    "slug": "BRA-1998-bd9086e5"
+    "team": "BRA",
+    "year": 1998,
+    "slug": "BRA-1998-908d42aa"
   },
   {
-    "sel": "COL",
-    "copa": 1998,
-    "slug": "COL-1998-fa757fb5"
+    "team": "COL",
+    "year": 1998,
+    "slug": "COL-1998-56c9cfa1"
   },
   {
-    "sel": "CRO",
-    "copa": 1998,
-    "slug": "CRO-1998-68360e09"
+    "team": "CRO",
+    "year": 1998,
+    "slug": "CRO-1998-5be070dd"
   },
   {
-    "sel": "DEN",
-    "copa": 1998,
-    "slug": "DEN-1998-5815dac7"
+    "team": "DEN",
+    "year": 1998,
+    "slug": "DEN-1998-a854b366"
   },
   {
-    "sel": "ENG",
-    "copa": 1998,
-    "slug": "ENG-1998-438cf0af"
+    "team": "ENG",
+    "year": 1998,
+    "slug": "ENG-1998-693eda1b"
   },
   {
-    "sel": "FRA",
-    "copa": 1998,
-    "slug": "FRA-1998-c7161f55"
+    "team": "FRA",
+    "year": 1998,
+    "slug": "FRA-1998-2d46fea6"
   },
   {
-    "sel": "GER",
-    "copa": 1998,
-    "slug": "GER-1998-d37750bd"
+    "team": "GER",
+    "year": 1998,
+    "slug": "GER-1998-fd07c395"
   },
   {
-    "sel": "ITA",
-    "copa": 1998,
-    "slug": "ITA-1998-f65c4a41"
+    "team": "ITA",
+    "year": 1998,
+    "slug": "ITA-1998-92bcd933"
   },
   {
-    "sel": "NED",
-    "copa": 1998,
-    "slug": "NED-1998-fed5b9a9"
+    "team": "NED",
+    "year": 1998,
+    "slug": "NED-1998-9c23e1b2"
   },
   {
-    "sel": "NGA",
-    "copa": 1998,
-    "slug": "NGA-1998-71639d32"
+    "team": "NGA",
+    "year": 1998,
+    "slug": "NGA-1998-c1d52851"
   },
   {
-    "sel": "PAR",
-    "copa": 1998,
-    "slug": "PAR-1998-5e5f1e48"
+    "team": "PAR",
+    "year": 1998,
+    "slug": "PAR-1998-22a4209a"
   },
   {
-    "sel": "SRB",
-    "copa": 1998,
-    "slug": "SRB-1998-07d5209f"
+    "team": "SRB",
+    "year": 1998,
+    "slug": "SRB-1998-c693e4f8"
   },
   {
-    "sel": "ARG",
-    "copa": 2002,
-    "slug": "ARG-2002-ba81ab1c"
+    "team": "ARG",
+    "year": 2002,
+    "slug": "ARG-2002-6f47e5c0"
   },
   {
-    "sel": "BRA",
-    "copa": 2002,
-    "slug": "BRA-2002-67e9fc9b"
+    "team": "BRA",
+    "year": 2002,
+    "slug": "BRA-2002-f8314839"
   },
   {
-    "sel": "CMR",
-    "copa": 2002,
-    "slug": "CMR-2002-3e9c81c2"
+    "team": "CMR",
+    "year": 2002,
+    "slug": "CMR-2002-135cdcc6"
   },
   {
-    "sel": "DEN",
-    "copa": 2002,
-    "slug": "DEN-2002-e3fd39ae"
+    "team": "DEN",
+    "year": 2002,
+    "slug": "DEN-2002-1fd1c2b5"
   },
   {
-    "sel": "ESP",
-    "copa": 2002,
-    "slug": "ESP-2002-a0d9814f"
+    "team": "ESP",
+    "year": 2002,
+    "slug": "ESP-2002-615f186c"
   },
   {
-    "sel": "FRA",
-    "copa": 2002,
-    "slug": "FRA-2002-7be6bd26"
+    "team": "FRA",
+    "year": 2002,
+    "slug": "FRA-2002-a4c40df5"
   },
   {
-    "sel": "GER",
-    "copa": 2002,
-    "slug": "GER-2002-b758bd4a"
+    "team": "GER",
+    "year": 2002,
+    "slug": "GER-2002-798aa162"
   },
   {
-    "sel": "IRL",
-    "copa": 2002,
-    "slug": "IRL-2002-3423dc1b"
+    "team": "IRL",
+    "year": 2002,
+    "slug": "IRL-2002-20cb91a3"
   },
   {
-    "sel": "JPN",
-    "copa": 2002,
-    "slug": "JPN-2002-969d3382"
+    "team": "JPN",
+    "year": 2002,
+    "slug": "JPN-2002-7036b360"
   },
   {
-    "sel": "KOR",
-    "copa": 2002,
-    "slug": "KOR-2002-a5759d93"
+    "team": "KOR",
+    "year": 2002,
+    "slug": "KOR-2002-34e778f8"
   },
   {
-    "sel": "MEX",
-    "copa": 2002,
-    "slug": "MEX-2002-13060e3a"
+    "team": "MEX",
+    "year": 2002,
+    "slug": "MEX-2002-21eaa3a6"
   },
   {
-    "sel": "NGA",
-    "copa": 2002,
-    "slug": "NGA-2002-8713fea8"
+    "team": "NGA",
+    "year": 2002,
+    "slug": "NGA-2002-1d12d37e"
   },
   {
-    "sel": "SEN",
-    "copa": 2002,
-    "slug": "SEN-2002-845efd6d"
+    "team": "SEN",
+    "year": 2002,
+    "slug": "SEN-2002-891408e2"
   },
   {
-    "sel": "TUR",
-    "copa": 2002,
-    "slug": "TUR-2002-08256e19"
+    "team": "TUR",
+    "year": 2002,
+    "slug": "TUR-2002-a28e8a49"
   },
   {
-    "sel": "USA",
-    "copa": 2002,
-    "slug": "USA-2002-c8bd4f18"
+    "team": "USA",
+    "year": 2002,
+    "slug": "USA-2002-25578e7d"
   },
   {
-    "sel": "ARG",
-    "copa": 2006,
-    "slug": "ARG-2006-7e032c4e"
+    "team": "ARG",
+    "year": 2006,
+    "slug": "ARG-2006-7347ec0c"
   },
   {
-    "sel": "AUS",
-    "copa": 2006,
-    "slug": "AUS-2006-54514fcf"
+    "team": "AUS",
+    "year": 2006,
+    "slug": "AUS-2006-467f5a1d"
   },
   {
-    "sel": "BRA",
-    "copa": 2006,
-    "slug": "BRA-2006-22135ead"
+    "team": "BRA",
+    "year": 2006,
+    "slug": "BRA-2006-fc314e85"
   },
   {
-    "sel": "CIV",
-    "copa": 2006,
-    "slug": "CIV-2006-c2353ebe"
+    "team": "CIV",
+    "year": 2006,
+    "slug": "CIV-2006-408c1822"
   },
   {
-    "sel": "CZE",
-    "copa": 2006,
-    "slug": "CZE-2006-bf85f5ca"
+    "team": "CZE",
+    "year": 2006,
+    "slug": "CZE-2006-2d09d624"
   },
   {
-    "sel": "ECU",
-    "copa": 2006,
-    "slug": "ECU-2006-f3c2934a"
+    "team": "ECU",
+    "year": 2006,
+    "slug": "ECU-2006-a87cd6a5"
   },
   {
-    "sel": "ENG",
-    "copa": 2006,
-    "slug": "ENG-2006-4200cdfc"
+    "team": "ENG",
+    "year": 2006,
+    "slug": "ENG-2006-3975222c"
   },
   {
-    "sel": "FRA",
-    "copa": 2006,
-    "slug": "FRA-2006-57068540"
+    "team": "FRA",
+    "year": 2006,
+    "slug": "FRA-2006-a0c407a9"
   },
   {
-    "sel": "GER",
-    "copa": 2006,
-    "slug": "GER-2006-4ddc11cd"
+    "team": "GER",
+    "year": 2006,
+    "slug": "GER-2006-758a9b16"
   },
   {
-    "sel": "ITA",
-    "copa": 2006,
-    "slug": "ITA-2006-5848a45a"
+    "team": "ITA",
+    "year": 2006,
+    "slug": "ITA-2006-41d4fe14"
   },
   {
-    "sel": "POR",
-    "copa": 2006,
-    "slug": "POR-2006-4c81b45e"
+    "team": "POR",
+    "year": 2006,
+    "slug": "POR-2006-6ae911fb"
   },
   {
-    "sel": "SUI",
-    "copa": 2006,
-    "slug": "SUI-2006-a9d0dff3"
+    "team": "SUI",
+    "year": 2006,
+    "slug": "SUI-2006-bb4e4a99"
   },
   {
-    "sel": "UKR",
-    "copa": 2006,
-    "slug": "UKR-2006-a3f485bb"
+    "team": "UKR",
+    "year": 2006,
+    "slug": "UKR-2006-8d7b53c2"
   },
   {
-    "sel": "ARG",
-    "copa": 2010,
-    "slug": "ARG-2010-51b83578"
+    "team": "ARG",
+    "year": 2010,
+    "slug": "ARG-2010-f74afa6f"
   },
   {
-    "sel": "BRA",
-    "copa": 2010,
-    "slug": "BRA-2010-9dc464c7"
+    "team": "BRA",
+    "year": 2010,
+    "slug": "BRA-2010-102f2f6a"
   },
   {
-    "sel": "CHI",
-    "copa": 2010,
-    "slug": "CHI-2010-785b2c31"
+    "team": "CHI",
+    "year": 2010,
+    "slug": "CHI-2010-36b172b1"
   },
   {
-    "sel": "CIV",
-    "copa": 2010,
-    "slug": "CIV-2010-c2868372"
+    "team": "CIV",
+    "year": 2010,
+    "slug": "CIV-2010-408e56b9"
   },
   {
-    "sel": "ENG",
-    "copa": 2010,
-    "slug": "ENG-2010-5e195449"
+    "team": "ENG",
+    "year": 2010,
+    "slug": "ENG-2010-3d77670f"
   },
   {
-    "sel": "ESP",
-    "copa": 2010,
-    "slug": "ESP-2010-2a7c6477"
+    "team": "ESP",
+    "year": 2010,
+    "slug": "ESP-2010-6961639b"
   },
   {
-    "sel": "GHA",
-    "copa": 2010,
-    "slug": "GHA-2010-09a4ee72"
+    "team": "GHA",
+    "year": 2010,
+    "slug": "GHA-2010-7cc0ef75"
   },
   {
-    "sel": "GRE",
-    "copa": 2010,
-    "slug": "GRE-2010-1972207d"
+    "team": "GRE",
+    "year": 2010,
+    "slug": "GRE-2010-702da7b3"
   },
   {
-    "sel": "JPN",
-    "copa": 2010,
-    "slug": "JPN-2010-6c2be4ff"
+    "team": "JPN",
+    "year": 2010,
+    "slug": "JPN-2010-7838fe8f"
   },
   {
-    "sel": "KOR",
-    "copa": 2010,
-    "slug": "KOR-2010-e7466020"
+    "team": "KOR",
+    "year": 2010,
+    "slug": "KOR-2010-3ce9c427"
   },
   {
-    "sel": "MEX",
-    "copa": 2010,
-    "slug": "MEX-2010-493017a4"
+    "team": "MEX",
+    "year": 2010,
+    "slug": "MEX-2010-a5edb209"
   },
   {
-    "sel": "NED",
-    "copa": 2010,
-    "slug": "NED-2010-bf7a9b6c"
+    "team": "NED",
+    "year": 2010,
+    "slug": "NED-2010-3ce3f1a2"
   },
   {
-    "sel": "PAR",
-    "copa": 2010,
-    "slug": "PAR-2010-836cc26e"
+    "team": "PAR",
+    "year": 2010,
+    "slug": "PAR-2010-a2460d5a"
   },
   {
-    "sel": "URU",
-    "copa": 2010,
-    "slug": "URU-2010-e7d7536c"
+    "team": "URU",
+    "year": 2010,
+    "slug": "URU-2010-dcead1f9"
   },
   {
-    "sel": "ALG",
-    "copa": 2014,
-    "slug": "ALG-2014-ecee73df"
+    "team": "ALG",
+    "year": 2014,
+    "slug": "ALG-2014-e78c80cd"
   },
   {
-    "sel": "ARG",
-    "copa": 2014,
-    "slug": "ARG-2014-c90d8010"
+    "team": "ARG",
+    "year": 2014,
+    "slug": "ARG-2014-f34af423"
   },
   {
-    "sel": "BRA",
-    "copa": 2014,
-    "slug": "BRA-2014-2e4b6eb7"
+    "team": "BRA",
+    "year": 2014,
+    "slug": "BRA-2014-0c2f291e"
   },
   {
-    "sel": "CHI",
-    "copa": 2014,
-    "slug": "CHI-2014-cbf91b02"
+    "team": "CHI",
+    "year": 2014,
+    "slug": "CHI-2014-3ab178fd"
   },
   {
-    "sel": "CIV",
-    "copa": 2014,
-    "slug": "CIV-2014-d2f0a358"
+    "team": "CIV",
+    "year": 2014,
+    "slug": "CIV-2014-448e5d05"
   },
   {
-    "sel": "COL",
-    "copa": 2014,
-    "slug": "COL-2014-687c2eec"
+    "team": "COL",
+    "year": 2014,
+    "slug": "COL-2014-ba09c5fd"
   },
   {
-    "sel": "CRC",
-    "copa": 2014,
-    "slug": "CRC-2014-037ae826"
+    "team": "CRC",
+    "year": 2014,
+    "slug": "CRC-2014-8f84c445"
   },
   {
-    "sel": "FRA",
-    "copa": 2014,
-    "slug": "FRA-2014-5dbd27d4"
+    "team": "FRA",
+    "year": 2014,
+    "slug": "FRA-2014-a0c1c912"
   },
   {
-    "sel": "GER",
-    "copa": 2014,
-    "slug": "GER-2014-73ec0da5"
+    "team": "GER",
+    "year": 2014,
+    "slug": "GER-2014-798cdff9"
   },
   {
-    "sel": "GHA",
-    "copa": 2014,
-    "slug": "GHA-2014-53e66043"
+    "team": "GHA",
+    "year": 2014,
+    "slug": "GHA-2014-78c0e929"
   },
   {
-    "sel": "GRE",
-    "copa": 2014,
-    "slug": "GRE-2014-3f5e99ae"
+    "team": "GRE",
+    "year": 2014,
+    "slug": "GRE-2014-742dadff"
   },
   {
-    "sel": "NED",
-    "copa": 2014,
-    "slug": "NED-2014-4daa8ae4"
+    "team": "NED",
+    "year": 2014,
+    "slug": "NED-2014-38e3eb56"
   },
   {
-    "sel": "NGA",
-    "copa": 2014,
-    "slug": "NGA-2014-17d97507"
+    "team": "NGA",
+    "year": 2014,
+    "slug": "NGA-2014-a515e82d"
   },
   {
-    "sel": "SUI",
-    "copa": 2014,
-    "slug": "SUI-2014-a639e695"
+    "team": "SUI",
+    "year": 2014,
+    "slug": "SUI-2014-bb4c0c02"
   },
   {
-    "sel": "URU",
-    "copa": 2014,
-    "slug": "URU-2014-a047534e"
+    "team": "URU",
+    "year": 2014,
+    "slug": "URU-2014-e0ead845"
   },
   {
-    "sel": "ARG",
-    "copa": 2018,
-    "slug": "ARG-2018-be137bfb"
+    "team": "ARG",
+    "year": 2018,
+    "slug": "ARG-2018-ff4b0707"
   },
   {
-    "sel": "BEL",
-    "copa": 2018,
-    "slug": "BEL-2018-d87de402"
+    "team": "BEL",
+    "year": 2018,
+    "slug": "BEL-2018-797d15ce"
   },
   {
-    "sel": "BRA",
-    "copa": 2018,
-    "slug": "BRA-2018-e40afe99"
+    "team": "BRA",
+    "year": 2018,
+    "slug": "BRA-2018-082f22d2"
   },
   {
-    "sel": "CRO",
-    "copa": 2018,
-    "slug": "CRO-2018-a98946f7"
+    "team": "CRO",
+    "year": 2018,
+    "slug": "CRO-2018-b2f944e5"
   },
   {
-    "sel": "EGY",
-    "copa": 2018,
-    "slug": "EGY-2018-119716e4"
+    "team": "EGY",
+    "year": 2018,
+    "slug": "EGY-2018-73bd1b5a"
   },
   {
-    "sel": "ENG",
-    "copa": 2018,
-    "slug": "ENG-2018-d8623eaa"
+    "team": "ENG",
+    "year": 2018,
+    "slug": "ENG-2018-457773a7"
   },
   {
-    "sel": "ESP",
-    "copa": 2018,
-    "slug": "ESP-2018-3f03525d"
+    "team": "ESP",
+    "year": 2018,
+    "slug": "ESP-2018-61615703"
   },
   {
-    "sel": "FRA",
-    "copa": 2018,
-    "slug": "FRA-2018-0381553b"
+    "team": "FRA",
+    "year": 2018,
+    "slug": "FRA-2018-a4c1cf5e"
   },
   {
-    "sel": "KOR",
-    "copa": 2018,
-    "slug": "KOR-2018-2d2e1ea6"
+    "team": "KOR",
+    "year": 2018,
+    "slug": "KOR-2018-34e9b78f"
   },
   {
-    "sel": "MAR",
-    "copa": 2018,
-    "slug": "MAR-2018-58ae40b9"
+    "team": "MAR",
+    "year": 2018,
+    "slug": "MAR-2018-24bce557"
   },
   {
-    "sel": "POR",
-    "copa": 2018,
-    "slug": "POR-2018-301ac3a7"
+    "team": "POR",
+    "year": 2018,
+    "slug": "POR-2018-e2e5fd4c"
   },
   {
-    "sel": "RUS",
-    "copa": 2018,
-    "slug": "RUS-2018-50c67f83"
+    "team": "RUS",
+    "year": 2018,
+    "slug": "RUS-2018-de3dce45"
   },
   {
-    "sel": "SUI",
-    "copa": 2018,
-    "slug": "SUI-2018-c51ab49e"
+    "team": "SUI",
+    "year": 2018,
+    "slug": "SUI-2018-bf4c124e"
   },
   {
-    "sel": "SWE",
-    "copa": 2018,
-    "slug": "SWE-2018-f66d46cd"
+    "team": "SWE",
+    "year": 2018,
+    "slug": "SWE-2018-7e2b40b4"
   },
   {
-    "sel": "ARG",
-    "copa": 2022,
-    "slug": "ARG-2022-2e1f3f30"
+    "team": "ARG",
+    "year": 2022,
+    "slug": "ARG-2022-87438e5a"
   },
   {
-    "sel": "AUS",
-    "copa": 2022,
-    "slug": "AUS-2022-6f7f7b7b"
+    "team": "AUS",
+    "year": 2022,
+    "slug": "AUS-2022-327abd73"
   },
   {
-    "sel": "BRA",
-    "copa": 2022,
-    "slug": "BRA-2022-7c5395c8"
+    "team": "BRA",
+    "year": 2022,
+    "slug": "BRA-2022-082ce43b"
   },
   {
-    "sel": "CRC",
-    "copa": 2022,
-    "slug": "CRC-2022-96fde86a"
+    "team": "CRC",
+    "year": 2022,
+    "slug": "CRC-2022-0f87cc5c"
   },
   {
-    "sel": "CRO",
-    "copa": 2022,
-    "slug": "CRO-2022-889b02e7"
+    "team": "CRO",
+    "year": 2022,
+    "slug": "CRO-2022-9efb6400"
   },
   {
-    "sel": "ECU",
-    "copa": 2022,
-    "slug": "ECU-2022-b73f4bc9"
+    "team": "ECU",
+    "year": 2022,
+    "slug": "ECU-2022-3477a2db"
   },
   {
-    "sel": "FRA",
-    "copa": 2022,
-    "slug": "FRA-2022-b2e89e4b"
+    "team": "FRA",
+    "year": 2022,
+    "slug": "FRA-2022-34bee077"
   },
   {
-    "sel": "JPN",
-    "copa": 2022,
-    "slug": "JPN-2022-5e0f014f"
+    "team": "JPN",
+    "year": 2022,
+    "slug": "JPN-2022-0831927a"
   },
   {
-    "sel": "KOR",
-    "copa": 2022,
-    "slug": "KOR-2022-a971e52d"
+    "team": "KOR",
+    "year": 2022,
+    "slug": "KOR-2022-ace225b2"
   },
   {
-    "sel": "MAR",
-    "copa": 2022,
-    "slug": "MAR-2022-863cbcf3"
+    "team": "MAR",
+    "year": 2022,
+    "slug": "MAR-2022-acb56caa"
   },
   {
-    "sel": "POR",
-    "copa": 2022,
-    "slug": "POR-2022-e262ce0f"
+    "team": "POR",
+    "year": 2022,
+    "slug": "POR-2022-5eed7c45"
   },
   {
-    "sel": "SEN",
-    "copa": 2022,
-    "slug": "SEN-2022-a462e9ea"
+    "team": "SEN",
+    "year": 2022,
+    "slug": "SEN-2022-11195c28"
   },
   {
-    "sel": "SRB",
-    "copa": 2022,
-    "slug": "SRB-2022-ae3730fe"
+    "team": "SRB",
+    "year": 2022,
+    "slug": "SRB-2022-344e89e5"
   },
   {
-    "sel": "ARG",
-    "copa": 2026,
-    "slug": "ARG-2026-54d7baad"
+    "team": "ARG",
+    "year": 2026,
+    "slug": "ARG-2026-8343880e"
   },
   {
-    "sel": "BEL",
-    "copa": 2026,
-    "slug": "BEL-2026-c2be7438"
+    "team": "BEL",
+    "year": 2026,
+    "slug": "BEL-2026-057a209b"
   },
   {
-    "sel": "BRA",
-    "copa": 2026,
-    "slug": "BRA-2026-8245d894"
+    "team": "BRA",
+    "year": 2026,
+    "slug": "BRA-2026-0c2cea87"
   },
   {
-    "sel": "ECU",
-    "copa": 2026,
-    "slug": "ECU-2026-a2679211"
+    "team": "ECU",
+    "year": 2026,
+    "slug": "ECU-2026-3877a927"
   },
   {
-    "sel": "ENG",
-    "copa": 2026,
-    "slug": "ENG-2026-c2b67920"
+    "team": "ENG",
+    "year": 2026,
+    "slug": "ENG-2026-c96ff4ae"
   },
   {
-    "sel": "ESP",
-    "copa": 2026,
-    "slug": "ESP-2026-4b699d69"
+    "team": "ESP",
+    "year": 2026,
+    "slug": "ESP-2026-dd59cb72"
   },
   {
-    "sel": "FRA",
-    "copa": 2026,
-    "slug": "FRA-2026-cff9b52b"
+    "team": "FRA",
+    "year": 2026,
+    "slug": "FRA-2026-30beda2b"
   },
   {
-    "sel": "GER",
-    "copa": 2026,
-    "slug": "GER-2026-c774f243"
+    "team": "GER",
+    "year": 2026,
+    "slug": "GER-2026-058ffaf4"
   },
   {
-    "sel": "NED",
-    "copa": 2026,
-    "slug": "NED-2026-01a381ec"
+    "team": "NED",
+    "year": 2026,
+    "slug": "NED-2026-38e1acbf"
   },
   {
-    "sel": "POR",
-    "copa": 2026,
-    "slug": "POR-2026-94693848"
+    "team": "POR",
+    "year": 2026,
+    "slug": "POR-2026-5aed75f9"
   }
 ]

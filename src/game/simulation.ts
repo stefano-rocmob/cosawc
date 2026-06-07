@@ -52,23 +52,23 @@ export function simulateMatch(
 ): { gf: number; ga: number; outcome: MatchOutcome } {
   const gf = poisson(rng, goalLambda(userAttack, opponentOverall));
   const ga = poisson(rng, goalLambda(opponentOverall, userDefense));
-  const outcome: MatchOutcome = gf > ga ? "V" : gf < ga ? "D" : "E";
+  const outcome: MatchOutcome = gf > ga ? "W" : gf < ga ? "L" : "D";
   return { gf, ga, outcome };
 }
 
 function isGoalkeeper(player: Player): boolean {
-  return player.positions.includes("GOL");
+  return player.positions.includes("GK");
 }
 
 function isLegendaryGk(player: Player): boolean {
-  return !!player.playerId && LEGENDARY_GK_IDS.has(player.playerId);
+  return !!player.id && LEGENDARY_GK_IDS.has(player.id);
 }
 
 function scorerWeight(player: Player): number {
   const weights = player.positions.map(
     (pos) => SCORER_CATEGORY_WEIGHTS[POSITION_TO_CATEGORY[pos]] ?? 0.1,
   );
-  return Math.max(...weights) * player.force;
+  return Math.max(...weights) * player.rating;
 }
 
 function pickScorers(
@@ -81,7 +81,7 @@ function pickScorers(
 
   const weights = lineup.map((p) => {
     if (isGoalkeeper(p) && !isLegendaryGk(p)) return 0;
-    if (isGoalkeeper(p) && isLegendaryGk(p)) return 0.25 * p.force;
+    if (isGoalkeeper(p) && isLegendaryGk(p)) return 0.25 * p.rating;
     return scorerWeight(p);
   });
 
@@ -134,7 +134,7 @@ function gkScorerMinutes(rng: Rng, used: Set<number>): number {
 
 function goalkeeperNames(players: Player[]): Set<string> {
   return new Set(
-    players.filter((p) => p.positions.includes("GOL")).map((p) => p.name),
+    players.filter((p) => p.positions.includes("GK")).map((p) => p.name),
   );
 }
 
@@ -200,7 +200,7 @@ function simulateGroupStandings(
   const user: GroupSimResult = {
     me: true,
     pts: userResults.reduce(
-      (acc, r) => acc + (r.outcome === "V" ? 3 : r.outcome === "E" ? 1 : 0),
+      (acc, r) => acc + (r.outcome === "W" ? 3 : r.outcome === "D" ? 1 : 0),
       0,
     ),
     gd: userResults.reduce((acc, r) => acc + (r.gf - r.ga), 0),
@@ -211,7 +211,7 @@ function simulateGroupStandings(
     if (userResults.length >= 3) {
       const mirror = userResults[oppIndex];
       return {
-        pts: mirror.outcome === "D" ? 3 : mirror.outcome === "E" ? 1 : 0,
+        pts: mirror.outcome === "L" ? 3 : mirror.outcome === "D" ? 1 : 0,
         gd: mirror.ga - mirror.gf,
         gf: mirror.ga,
         oppIndex,
@@ -223,9 +223,9 @@ function simulateGroupStandings(
   for (let i = 0; i < opponentOveralls.length; i++) {
     for (let j = i + 1; j < opponentOveralls.length; j++) {
       const match = simulateMatch(rng, opponentOveralls[i], opponentOveralls[i], opponentOveralls[j]);
-      if (match.outcome === "V") {
+      if (match.outcome === "W") {
         oppRows[i].pts += 3;
-      } else if (match.outcome === "E") {
+      } else if (match.outcome === "D") {
         oppRows[i].pts += 1;
         oppRows[j].pts += 1;
       } else {
@@ -254,11 +254,11 @@ export function simulateTournament(
   userDefense: number,
   userLineup: Player[],
   opponents: SquadRef[],
-  getOpponentSquad: (sel: string, copa: number) => Player[],
+  getOpponentSquad: (team: string, year: number) => Player[],
 ): TournamentResult {
-  const tournamentSeed = `${seed.toUpperCase()}:copa`;
+  const tournamentSeed = `${seed.toUpperCase()}:tournament`;
   const matchRng = createRng(tournamentSeed);
-  const scorerRng = createRng(`${tournamentSeed}:gols`);
+  const scorerRng = createRng(`${tournamentSeed}:goals`);
   const teamAvg = (userAttack + userDefense) / 2;
 
   const campaign: MatchResult[] = [];
@@ -278,16 +278,16 @@ export function simulateTournament(
       const groupStart = oppIdx;
 
       for (const opp of phase.opponents) {
-        const oppRef = opponents[oppIdx++] ?? { sel: "", copa: 0 };
+        const oppRef = opponents[oppIdx++] ?? { team: "", year: 0 };
         const result = simulateMatch(matchRng, userAttack, userDefense, opp.overall);
         gf += result.gf;
         ga += result.ga;
-        if (result.outcome === "V") wins++;
-        else if (result.outcome === "E") draws++;
+        if (result.outcome === "W") wins++;
+        else if (result.outcome === "D") draws++;
         else losses++;
 
         const matchIndex = oppIdx - 1;
-        const oppSquad = getOpponentSquad(oppRef.sel, oppRef.copa);
+        const oppSquad = getOpponentSquad(oppRef.team, oppRef.year);
         const scorers = pickScorers(scorerRng, userLineup, result.gf, {
           isKnockout: false,
         });
@@ -303,8 +303,8 @@ export function simulateTournament(
           ga: result.ga,
           outcome: result.outcome,
           advanced: true,
-          oppSel: oppRef.sel,
-          oppCopa: oppRef.copa,
+          oppTeam: oppRef.team,
+          oppYear: oppRef.year,
           scorers,
           conceded,
           goals: buildGoalTimeline(
@@ -338,8 +338,8 @@ export function simulateTournament(
             pts: row.pts,
             gd: row.gd,
             gf: row.gf,
-            sel: ref?.sel,
-            copa: ref?.copa,
+            team: ref?.team,
+            year: ref?.year,
           };
         });
         last.advanced = advanced;
@@ -348,16 +348,16 @@ export function simulateTournament(
     }
 
     const opp = phase.opponent;
-    const oppRef = opponents[oppIdx++] ?? { sel: "", copa: 0 };
+    const oppRef = opponents[oppIdx++] ?? { team: "", year: 0 };
     const result = simulateMatch(matchRng, userAttack, userDefense, opp.overall);
     gf += result.gf;
     ga += result.ga;
 
     let advanced: boolean;
-    if (result.outcome === "V") {
+    if (result.outcome === "W") {
       advanced = true;
       wins++;
-    } else if (result.outcome === "D") {
+    } else if (result.outcome === "L") {
       advanced = false;
       losses++;
     } else {
@@ -372,8 +372,8 @@ export function simulateTournament(
     }
 
     const matchIndex = oppIdx - 1;
-    const isDraw = result.outcome === "E";
-    const oppSquad = getOpponentSquad(oppRef.sel, oppRef.copa);
+    const isDraw = result.outcome === "D";
+    const oppSquad = getOpponentSquad(oppRef.team, oppRef.year);
     const scorers = pickScorers(scorerRng, userLineup, result.gf, {
       isKnockout: true,
     });
@@ -390,8 +390,8 @@ export function simulateTournament(
       outcome: result.outcome,
       advanced,
       penalties: isDraw,
-      oppSel: oppRef.sel,
-      oppCopa: oppRef.copa,
+      oppTeam: oppRef.team,
+      oppYear: oppRef.year,
       scorers,
       conceded,
       goals: buildGoalTimeline(
@@ -416,10 +416,10 @@ export function simulateTournament(
   const perfect = champion && wins === 7 && draws === 0 && losses === 0;
   const cleanSheet = champion && ga === 0;
   let badge: string | null = null;
-  if (perfect && gf - ga >= BADGE_THRESHOLDS.esmagadorGD) {
-    badge = "ESMAGADOR DE RECORDES";
+  if (perfect && gf - ga >= BADGE_THRESHOLDS.recordBreakerGD) {
+    badge = "RECORD BREAKER";
   } else if (cleanSheet) {
-    badge = "MURALHA";
+    badge = "THE WALL";
   }
 
   return {

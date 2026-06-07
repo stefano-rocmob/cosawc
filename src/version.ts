@@ -1,2 +1,2 @@
 /** App version — minor segment auto-bumps on each production build. */
-export const APP_VERSION = "1.4";
+export const APP_VERSION = "1.5";

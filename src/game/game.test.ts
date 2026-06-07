@@ -16,27 +16,27 @@ import { MODES } from "./constants";
 import type { DraftState, Player } from "./types";
 import { getFormationSlots } from "./formations";
 
-function makePlayer(overrides: Partial<Player> & Pick<Player, "playerId" | "positions">): Player {
+function makePlayer(overrides: Partial<Player> & Pick<Player, "id" | "positions">): Player {
   return {
-    name: overrides.name ?? overrides.playerId,
-    sel: overrides.sel ?? "BRA",
-    copa: overrides.copa ?? 1970,
+    name: overrides.name ?? overrides.id,
+    team: overrides.team ?? "BRA",
+    year: overrides.year ?? 1970,
     number: overrides.number ?? 10,
-    force: overrides.force ?? 80,
+    rating: overrides.rating ?? 80,
     legend: overrides.legend ?? false,
     ...overrides,
   };
 }
 
 function filledDraft(partial?: Partial<DraftState>): DraftState {
-  const slots = getFormationSlots("4-3-3", "equilibrado");
+  const slots = getFormationSlots("4-3-3", "balanced");
   return {
     formation: "4-3-3",
-    style: "equilibrado",
-    mode: "classico",
+    style: "balanced",
+    mode: "classic",
     slots,
     filled: slots.map(() => null),
-    usedPlayerIds: [],
+    usedIds: [],
     rerollsLeft: 3,
     ...partial,
   };
@@ -44,67 +44,67 @@ function filledDraft(partial?: Partial<DraftState>): DraftState {
 
 describe("draft rules", () => {
   it("rejects duplicate player IDs", () => {
-    const player = makePlayer({ playerId: "messi", positions: ["CA"], force: 95 });
-    let state = createGameState("testseed", { mode: "classico" });
+    const player = makePlayer({ id: "messi", positions: ["ST"], rating: 95 });
+    let state = createGameState("testseed", { mode: "classic" });
     state = choosePlayer(state, player, 9);
-    expect(() => choosePlayer(state, { ...player, sel: "ARG", copa: 2014 }, 8)).toThrow(
+    expect(() => choosePlayer(state, { ...player, team: "ARG", year: 2014 }, 8)).toThrow(
       /already used/i,
     );
   });
 
   it("rejects incompatible position", () => {
-    const gk = makePlayer({ playerId: "gk1", positions: ["GOL"], force: 75 });
+    const gk = makePlayer({ id: "gk1", positions: ["GK"], rating: 75 });
     const state = createGameState("testseed");
     expect(() => choosePlayer(state, gk, 9)).toThrow(/cannot play/i);
   });
 
   it("rejects occupied slot", () => {
-    const ca = makePlayer({ playerId: "st1", positions: ["CA"], force: 85 });
+    const st = makePlayer({ id: "st1", positions: ["ST"], rating: 85 });
     let state = createGameState("testseed");
-    state = choosePlayer(state, ca, 9);
-    const ca2 = makePlayer({ playerId: "st2", positions: ["CA"], force: 80 });
-    expect(() => choosePlayer(state, ca2, 9)).toThrow(/occupied/i);
+    state = choosePlayer(state, st, 9);
+    const st2 = makePlayer({ id: "st2", positions: ["ST"], rating: 80 });
+    expect(() => choosePlayer(state, st2, 9)).toThrow(/occupied/i);
   });
 
   it("allows valid move to empty compatible slot", () => {
-    const player = makePlayer({ playerId: "mid1", positions: ["MC", "MEI"], force: 82 });
+    const player = makePlayer({ id: "mid1", positions: ["CM", "AM"], rating: 82 });
     let state = createGameState("testseed");
     state = choosePlayer(state, player, 6);
     const targets = getMoveTargets(state.draft, 6);
     expect(targets).toContain(7);
     state = movePlayer(state, 6, 7);
-    expect(state.draft.filled[7]?.playerId).toBe("mid1");
+    expect(state.draft.filled[7]?.id).toBe("mid1");
     expect(state.draft.filled[6]).toBeNull();
   });
 
   it("allows swap only when both players are compatible", () => {
-    const a = makePlayer({ playerId: "a", positions: ["MC", "MEI"], force: 80 });
-    const b = makePlayer({ playerId: "b", positions: ["MEI", "MC"], force: 78 });
+    const a = makePlayer({ id: "a", positions: ["CM", "AM"], rating: 80 });
+    const b = makePlayer({ id: "b", positions: ["AM", "CM"], rating: 78 });
     let state = createGameState("testseed");
     state = choosePlayer(state, a, 6);
-    state = { ...state, current: { sel: "BRA", copa: 1982 } };
+    state = { ...state, current: { team: "BRA", year: 1982 } };
     state = choosePlayer(state, b, 7);
     expect(getMoveTargets(state.draft, 6)).toContain(7);
     state = movePlayer(state, 6, 7);
-    expect(state.draft.filled[6]?.playerId).toBe("b");
-    expect(state.draft.filled[7]?.playerId).toBe("a");
+    expect(state.draft.filled[6]?.id).toBe("b");
+    expect(state.draft.filled[7]?.id).toBe("a");
   });
 });
 
 describe("scoring", () => {
-  it("overall = rounded average force", () => {
+  it("overall = rounded average rating", () => {
     const players = [
-      makePlayer({ playerId: "a", positions: ["CA"], force: 80 }),
-      makePlayer({ playerId: "b", positions: ["MC"], force: 90 }),
+      makePlayer({ id: "a", positions: ["ST"], rating: 80 }),
+      makePlayer({ id: "b", positions: ["CM"], rating: 90 }),
     ];
     expect(calcOverall(players)).toBe(85);
   });
 
   it("attack/defense weighted by slot position", () => {
-    const slots = getFormationSlots("4-3-3", "equilibrado");
+    const slots = getFormationSlots("4-3-3", "balanced");
     const filled = slots.map((slot) => {
-      if (slot.pos === "CA") return makePlayer({ playerId: "st", positions: ["CA"], force: 90 });
-      if (slot.pos === "GOL") return makePlayer({ playerId: "gk", positions: ["GOL"], force: 70 });
+      if (slot.pos === "ST") return makePlayer({ id: "st", positions: ["ST"], rating: 90 });
+      if (slot.pos === "GK") return makePlayer({ id: "gk", positions: ["GK"], rating: 70 });
       return null;
     });
     const draft = filledDraft({ slots, filled });
@@ -116,33 +116,33 @@ describe("scoring", () => {
 });
 
 describe("rerolls", () => {
-  it("classico reroll budget = 3", () => {
-    expect(MODES.classico.rerolls).toBe(3);
-    const state = createGameState("abc", { mode: "classico" });
+  it("classic reroll budget = 3", () => {
+    expect(MODES.classic.rerolls).toBe(3);
+    const state = createGameState("abc", { mode: "classic" });
     expect(state.draft.rerollsLeft).toBe(3);
   });
 
-  it("almanaque reroll budget = 1", () => {
-    expect(MODES.almanaque.rerolls).toBe(1);
-    const state = createGameState("abc", { mode: "almanaque" });
+  it("memory reroll budget = 1", () => {
+    expect(MODES.memory.rerolls).toBe(1);
+    const state = createGameState("abc", { mode: "memory" });
     expect(state.draft.rerollsLeft).toBe(1);
   });
 
   it("Another Cup keeps country family and changes year", () => {
     let state = createGameState("rerollseed");
-    state = { ...state, current: { sel: "ESP", copa: 1950 }, rollIndex: 1, rerollNo: 0 };
-    const next = rerollSquadAction(state, "copa");
-    expect(["ESP"]).toContain(next.current?.sel ?? "");
-    expect(next.current?.copa).not.toBe(1950);
+    state = { ...state, current: { team: "ESP", year: 1950 }, rollIndex: 1, rerollNo: 0 };
+    const next = rerollSquadAction(state, "year");
+    expect(["ESP"]).toContain(next.current?.team ?? "");
+    expect(next.current?.year).not.toBe(1950);
     expect(next.draft.rerollsLeft).toBe(2);
   });
 
   it("Another Team keeps year and changes country", () => {
     let state = createGameState("rerollseed2");
-    state = { ...state, current: { sel: "AUT", copa: 1982 }, rollIndex: 1, rerollNo: 0 };
-    const next = rerollSquadAction(state, "sel");
-    expect(next.current?.copa).toBe(1982);
-    expect(next.current?.sel).not.toBe("AUT");
+    state = { ...state, current: { team: "AUT", year: 1982 }, rollIndex: 1, rerollNo: 0 };
+    const next = rerollSquadAction(state, "team");
+    expect(next.current?.year).toBe(1982);
+    expect(next.current?.team).not.toBe("AUT");
     expect(next.draft.rerollsLeft).toBe(2);
   });
 
@@ -150,45 +150,45 @@ describe("rerolls", () => {
     let state = createGameState("emergency");
     state = rollSquad(state);
     const before = state.draft.rerollsLeft;
-    const next = rerollSquadAction(state, "sel", false);
+    const next = rerollSquadAction(state, "team", false);
     expect(next.draft.rerollsLeft).toBe(before);
   });
 });
 
 describe("simulation", () => {
-  const defPositions = [["LD"], ["ZAG"], ["ZAG"], ["LE"]] as const;
-  const midPositions = [["VOL"], ["MC"], ["MEI"], ["PD"], ["CA"], ["PE"]] as const;
+  const defPositions = [["RB"], ["CB"], ["CB"], ["LB"]] as const;
+  const midPositions = [["DM"], ["CM"], ["AM"], ["RW"], ["ST"], ["LW"]] as const;
   const lineup = Array.from({ length: 11 }, (_, i) =>
     makePlayer({
-      playerId: `p${i}`,
+      id: `p${i}`,
       name: `Player ${i}`,
       positions:
         i === 0
-          ? ["GOL"]
+          ? ["GK"]
           : i < 5
             ? [...defPositions[i - 1]]
             : [...midPositions[i - 5]],
-      force: 75 + i,
+      rating: 75 + i,
     }),
   );
 
   const opponents = [
-    { sel: "MEX", copa: 2010 },
-    { sel: "CIV", copa: 2010 },
-    { sel: "CHI", copa: 1974 },
-    { sel: "BRA", copa: 1954 },
-    { sel: "BRA", copa: 1970 },
-    { sel: "ECU", copa: 2006 },
-    { sel: "CRO", copa: 1998 },
+    { team: "MEX", year: 2010 },
+    { team: "CIV", year: 2010 },
+    { team: "CHI", year: 1974 },
+    { team: "BRA", year: 1954 },
+    { team: "BRA", year: 1970 },
+    { team: "ECU", year: 2006 },
+    { team: "CRO", year: 1998 },
   ];
 
   const getOppSquad = () =>
     Array.from({ length: 11 }, (_, i) =>
       makePlayer({
-        playerId: `o${i}`,
+        id: `o${i}`,
         name: `Opp ${i}`,
-        positions: i === 0 ? ["GOL"] : ["MC"],
-        force: 70,
+        positions: i === 0 ? ["GK"] : ["CM"],
+        rating: 70,
       }),
     );
 
@@ -210,7 +210,7 @@ describe("simulation", () => {
         getOppSquad,
       );
       const drawKnockout = result.campaign.find(
-        (m) => m.penalties && m.phase !== "GRUPOS",
+        (m) => m.penalties && m.phase !== "GROUP",
       );
       if (drawKnockout) {
         foundPenalties = true;
@@ -235,17 +235,17 @@ describe("simulation", () => {
   });
 
   it("legend has no scoring or simulation impact", () => {
-    const normal = lineup.map((p) => ({ ...p, legend: false, force: 80 }));
-    const legend = lineup.map((p) => ({ ...p, legend: true, force: 80 }));
+    const normal = lineup.map((p) => ({ ...p, legend: false, rating: 80 }));
+    const legend = lineup.map((p) => ({ ...p, legend: true, rating: 80 }));
     const scoresN = calcTeamScores({
       ...filledDraft(),
       filled: normal,
-      slots: getFormationSlots("4-3-3", "equilibrado"),
+      slots: getFormationSlots("4-3-3", "balanced"),
     });
     const scoresL = calcTeamScores({
       ...filledDraft(),
       filled: legend,
-      slots: getFormationSlots("4-3-3", "equilibrado"),
+      slots: getFormationSlots("4-3-3", "balanced"),
     });
     expect(scoresN).toEqual(scoresL);
     const simN = simulateTournament("leg1", scoresN.attack, scoresN.defense, normal, opponents, getOppSquad);
@@ -257,16 +257,16 @@ describe("simulation", () => {
 describe("player selection helpers", () => {
   it("detects when no selectable players remain", () => {
     const draft = filledDraft();
-    const gkOnly = [makePlayer({ playerId: "gk", positions: ["GOL"], force: 70 })];
+    const gkOnly = [makePlayer({ id: "gk", positions: ["GK"], rating: 70 })];
     expect(hasSelectablePlayer(draft, gkOnly)).toBe(true);
-    const strikerOnly = [makePlayer({ playerId: "st", positions: ["CA"], force: 90 })];
+    const strikerOnly = [makePlayer({ id: "st", positions: ["ST"], rating: 90 })];
     const filled = draft.filled.slice();
     draft.slots.forEach((slot, i) => {
-      if (slot.pos !== "GOL" && slot.pos !== "CA") {
+      if (slot.pos !== "GK" && slot.pos !== "ST") {
         filled[i] = makePlayer({
-          playerId: `fill-${i}`,
+          id: `fill-${i}`,
           positions: [slot.pos],
-          force: 70,
+          rating: 70,
         });
       }
     });
@@ -278,13 +278,13 @@ describe("player selection helpers", () => {
 describe("opponent generation", () => {
   it("generates 7 unique opponents avoiding lineup squads", () => {
     const state = createGameState("oppseed");
-    state.draft.filled = getFormationSlots("4-3-3", "equilibrado").map((slot, i) =>
+    state.draft.filled = getFormationSlots("4-3-3", "balanced").map((slot, i) =>
       i === 0
-        ? makePlayer({ playerId: "u1", positions: [slot.pos], sel: "BRA", copa: 1970 })
+        ? makePlayer({ id: "u1", positions: [slot.pos], team: "BRA", year: 1970 })
         : null,
     );
     const opps = generateOpponents(state);
     expect(opps).toHaveLength(7);
-    expect(opps.every((o) => !(o.sel === "BRA" && o.copa === 1970))).toBe(true);
+    expect(opps.every((o) => !(o.team === "BRA" && o.year === 1970))).toBe(true);
   });
 });

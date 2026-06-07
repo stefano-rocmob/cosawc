@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/bump-build-version.mjs",
+    "prebuild": "node tools/bump-build-version.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

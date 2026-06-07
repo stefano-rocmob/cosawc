@@ -4,7 +4,7 @@ import type { DraftState, Player, TeamScores } from "./types";
 export function calcOverall(filled: (Player | null)[]): number {
   const players = filled.filter((p): p is Player => p !== null);
   if (players.length === 0) return 0;
-  const sum = players.reduce((acc, p) => acc + p.force, 0);
+  const sum = players.reduce((acc, p) => acc + p.rating, 0);
   return Math.round(sum / players.length);
 }
 
@@ -23,9 +23,9 @@ export function calcTeamScores(draft: DraftState): TeamScores {
     attackDen += aw;
     defenseDen += dw;
     if (player) {
-      attackNum += player.force * aw;
-      defenseNum += player.force * dw;
-      overallSum += player.force;
+      attackNum += player.rating * aw;
+      defenseNum += player.rating * dw;
+      overallSum += player.rating;
       overallCount++;
     }
   });
